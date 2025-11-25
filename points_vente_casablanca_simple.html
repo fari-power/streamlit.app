@@ -1,0 +1,3683 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2a8d50e273c1ee946b9d4dcacbad0244 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2a8d50e273c1ee946b9d4dcacbad0244" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2a8d50e273c1ee946b9d4dcacbad0244 = L.map(
+                "map_2a8d50e273c1ee946b9d4dcacbad0244",
+                {
+                    center: [33.570639112380945, -7.623676524761905],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_da14388eb1865bcbb07e816ecac87999 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_da14388eb1865bcbb07e816ecac87999.addTo(map_2a8d50e273c1ee946b9d4dcacbad0244);
+        
+    
+            var marker_cluster_9211df804adc10b2260fd4e6fa3a500b = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_af05733d5ebb55d84bddba310d2c532b = L.marker(
+                [33.5738188, -7.6446827],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_49f3c918fdd33be6c968dc733dfa9646 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2000a4e94d58b10cef6de8fd2cd47c6b = $(`<div id="html_2000a4e94d58b10cef6de8fd2cd47c6b" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_49f3c918fdd33be6c968dc733dfa9646.setContent(html_2000a4e94d58b10cef6de8fd2cd47c6b);
+            
+        
+
+        marker_af05733d5ebb55d84bddba310d2c532b.bindPopup(popup_49f3c918fdd33be6c968dc733dfa9646)
+        ;
+
+        
+    
+    
+            marker_af05733d5ebb55d84bddba310d2c532b.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e6c73a99c4716a68b7fcf2c4540bc6d2 = L.marker(
+                [33.5771567, -7.6741813],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_234a4ccc256abfc73e003f3f37b5f973 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec32674b2721cd04f559eb2fcd0c7671 = $(`<div id="html_ec32674b2721cd04f559eb2fcd0c7671" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_234a4ccc256abfc73e003f3f37b5f973.setContent(html_ec32674b2721cd04f559eb2fcd0c7671);
+            
+        
+
+        marker_e6c73a99c4716a68b7fcf2c4540bc6d2.bindPopup(popup_234a4ccc256abfc73e003f3f37b5f973)
+        ;
+
+        
+    
+    
+            marker_e6c73a99c4716a68b7fcf2c4540bc6d2.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7ef116882f3e3ab876a18dc023a73ab9 = L.marker(
+                [33.5908121, -7.6462218],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_b8106cd1c4970f45a360d829dd4c5178 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b24b210502c2b85dd4f437e46830965 = $(`<div id="html_6b24b210502c2b85dd4f437e46830965" style="width: 100.0%; height: 100.0%;">Carrefour Gourmet - Supermarché</div>`)[0];
+                popup_b8106cd1c4970f45a360d829dd4c5178.setContent(html_6b24b210502c2b85dd4f437e46830965);
+            
+        
+
+        marker_7ef116882f3e3ab876a18dc023a73ab9.bindPopup(popup_b8106cd1c4970f45a360d829dd4c5178)
+        ;
+
+        
+    
+    
+            marker_7ef116882f3e3ab876a18dc023a73ab9.bindTooltip(
+                `<div>
+                     Carrefour Gourmet
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_613eb9e4aaf1da0649c396327b30bd57 = L.marker(
+                [33.5981369, -7.6644676],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_7bf682ae1a07c2c33f78ede3f020507a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b321d5591d95a238ea74a3c28813dd9 = $(`<div id="html_8b321d5591d95a238ea74a3c28813dd9" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_7bf682ae1a07c2c33f78ede3f020507a.setContent(html_8b321d5591d95a238ea74a3c28813dd9);
+            
+        
+
+        marker_613eb9e4aaf1da0649c396327b30bd57.bindPopup(popup_7bf682ae1a07c2c33f78ede3f020507a)
+        ;
+
+        
+    
+    
+            marker_613eb9e4aaf1da0649c396327b30bd57.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f5f7e217712c63162d412b2235864667 = L.marker(
+                [33.5802189, -7.6409084],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_2f20c716e11d9e35fc3f0c175f2c0a7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db8d3843926c686c3d5d64ca9a31dadf = $(`<div id="html_db8d3843926c686c3d5d64ca9a31dadf" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_2f20c716e11d9e35fc3f0c175f2c0a7f.setContent(html_db8d3843926c686c3d5d64ca9a31dadf);
+            
+        
+
+        marker_f5f7e217712c63162d412b2235864667.bindPopup(popup_2f20c716e11d9e35fc3f0c175f2c0a7f)
+        ;
+
+        
+    
+    
+            marker_f5f7e217712c63162d412b2235864667.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1e8eabdccd48e68feee38b2538c3926d = L.marker(
+                [33.5730326, -7.6198771],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_1de4ac2fa04d25ecf3ff05fe0d756ad7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a21b78aa5df31c263d0d53a88b5f72a = $(`<div id="html_8a21b78aa5df31c263d0d53a88b5f72a" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_1de4ac2fa04d25ecf3ff05fe0d756ad7.setContent(html_8a21b78aa5df31c263d0d53a88b5f72a);
+            
+        
+
+        marker_1e8eabdccd48e68feee38b2538c3926d.bindPopup(popup_1de4ac2fa04d25ecf3ff05fe0d756ad7)
+        ;
+
+        
+    
+    
+            marker_1e8eabdccd48e68feee38b2538c3926d.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0026a36b9f28790ae3bead329a05e6c2 = L.marker(
+                [33.597148, -7.6294045],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_fdb7a4c382a677776311ce9354fd7be3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ce6fbaa1d558604483ec27620cb460c = $(`<div id="html_1ce6fbaa1d558604483ec27620cb460c" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_fdb7a4c382a677776311ce9354fd7be3.setContent(html_1ce6fbaa1d558604483ec27620cb460c);
+            
+        
+
+        marker_0026a36b9f28790ae3bead329a05e6c2.bindPopup(popup_fdb7a4c382a677776311ce9354fd7be3)
+        ;
+
+        
+    
+    
+            marker_0026a36b9f28790ae3bead329a05e6c2.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2bccd9f1933ebdf128600ed34b2a1690 = L.marker(
+                [33.595159, -7.5913872],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_a960e139d45a1df35e99bb2e63e9c73b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a5426614376d43e3bd601c568efdc41 = $(`<div id="html_4a5426614376d43e3bd601c568efdc41" style="width: 100.0%; height: 100.0%;">Carrefour des Saveurs - Restaurant</div>`)[0];
+                popup_a960e139d45a1df35e99bb2e63e9c73b.setContent(html_4a5426614376d43e3bd601c568efdc41);
+            
+        
+
+        marker_2bccd9f1933ebdf128600ed34b2a1690.bindPopup(popup_a960e139d45a1df35e99bb2e63e9c73b)
+        ;
+
+        
+    
+    
+            marker_2bccd9f1933ebdf128600ed34b2a1690.bindTooltip(
+                `<div>
+                     Carrefour des Saveurs
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_08bab7b3c8987aab62ac791160eb1f44 = L.marker(
+                [33.5844973, -7.6080134],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_99de54d1e8200e7c38e66ea21d802577 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6afdd9b4a99bf82f8ab786237acb00c = $(`<div id="html_a6afdd9b4a99bf82f8ab786237acb00c" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_99de54d1e8200e7c38e66ea21d802577.setContent(html_a6afdd9b4a99bf82f8ab786237acb00c);
+            
+        
+
+        marker_08bab7b3c8987aab62ac791160eb1f44.bindPopup(popup_99de54d1e8200e7c38e66ea21d802577)
+        ;
+
+        
+    
+    
+            marker_08bab7b3c8987aab62ac791160eb1f44.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_680dbd536c58b302f2828c30e373da45 = L.marker(
+                [33.5739187, -7.6445744],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_69a27b2ee3f372481321ad35302c041b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ac58f110285ef5bdda01f9c57d74b0f = $(`<div id="html_3ac58f110285ef5bdda01f9c57d74b0f" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_69a27b2ee3f372481321ad35302c041b.setContent(html_3ac58f110285ef5bdda01f9c57d74b0f);
+            
+        
+
+        marker_680dbd536c58b302f2828c30e373da45.bindPopup(popup_69a27b2ee3f372481321ad35302c041b)
+        ;
+
+        
+    
+    
+            marker_680dbd536c58b302f2828c30e373da45.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1918e9c5e16d6f40eb7059c8f953cc53 = L.marker(
+                [33.5841408, -7.599484],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_b4748f9bc450b2e3f05b7ea9f4695620 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_565a0f8458a49709b92b478b393db232 = $(`<div id="html_565a0f8458a49709b92b478b393db232" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_b4748f9bc450b2e3f05b7ea9f4695620.setContent(html_565a0f8458a49709b92b478b393db232);
+            
+        
+
+        marker_1918e9c5e16d6f40eb7059c8f953cc53.bindPopup(popup_b4748f9bc450b2e3f05b7ea9f4695620)
+        ;
+
+        
+    
+    
+            marker_1918e9c5e16d6f40eb7059c8f953cc53.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ddf5772c6e1b0fc2c6f760a8e38bd83a = L.marker(
+                [33.5926838, -7.6011795],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_af3e69824ea6412b66a481ba12e78721 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c25708cf690280a690e2cc4782548a5e = $(`<div id="html_c25708cf690280a690e2cc4782548a5e" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_af3e69824ea6412b66a481ba12e78721.setContent(html_c25708cf690280a690e2cc4782548a5e);
+            
+        
+
+        marker_ddf5772c6e1b0fc2c6f760a8e38bd83a.bindPopup(popup_af3e69824ea6412b66a481ba12e78721)
+        ;
+
+        
+    
+    
+            marker_ddf5772c6e1b0fc2c6f760a8e38bd83a.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5010331bc85ef337017e5d082d217540 = L.marker(
+                [33.5740376, -7.6361871],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_cb8c489d388f49f78203c054efe4ded3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5fc0f9af586f4812a331e7c8d99ee4e1 = $(`<div id="html_5fc0f9af586f4812a331e7c8d99ee4e1" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_cb8c489d388f49f78203c054efe4ded3.setContent(html_5fc0f9af586f4812a331e7c8d99ee4e1);
+            
+        
+
+        marker_5010331bc85ef337017e5d082d217540.bindPopup(popup_cb8c489d388f49f78203c054efe4ded3)
+        ;
+
+        
+    
+    
+            marker_5010331bc85ef337017e5d082d217540.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d8968f87e4ff7c1237a14b3feb93656b = L.marker(
+                [33.5382022, -7.6435543],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_b5dc46b906b9a5bb56185d75fbeedd64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8621e436e244947653d85f27c15d189 = $(`<div id="html_d8621e436e244947653d85f27c15d189" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_b5dc46b906b9a5bb56185d75fbeedd64.setContent(html_d8621e436e244947653d85f27c15d189);
+            
+        
+
+        marker_d8968f87e4ff7c1237a14b3feb93656b.bindPopup(popup_b5dc46b906b9a5bb56185d75fbeedd64)
+        ;
+
+        
+    
+    
+            marker_d8968f87e4ff7c1237a14b3feb93656b.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eeb0df74d50f15182b413cd61c063b63 = L.marker(
+                [33.5380366, -7.6432946],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_1242537e50eaf0c19c386b658c3801cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5f55f1e8194564243b279606fbbe4ee = $(`<div id="html_d5f55f1e8194564243b279606fbbe4ee" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_1242537e50eaf0c19c386b658c3801cf.setContent(html_d5f55f1e8194564243b279606fbbe4ee);
+            
+        
+
+        marker_eeb0df74d50f15182b413cd61c063b63.bindPopup(popup_1242537e50eaf0c19c386b658c3801cf)
+        ;
+
+        
+    
+    
+            marker_eeb0df74d50f15182b413cd61c063b63.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f770b59d6488be6ca18e151480867c03 = L.marker(
+                [33.5173168, -7.7990506],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_d1eb16821065ee699a40147b05522fd5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e216901b780516624ee1cb927caffad1 = $(`<div id="html_e216901b780516624ee1cb927caffad1" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_d1eb16821065ee699a40147b05522fd5.setContent(html_e216901b780516624ee1cb927caffad1);
+            
+        
+
+        marker_f770b59d6488be6ca18e151480867c03.bindPopup(popup_d1eb16821065ee699a40147b05522fd5)
+        ;
+
+        
+    
+    
+            marker_f770b59d6488be6ca18e151480867c03.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0597a644a053791de358b271332a6ebf = L.marker(
+                [33.5176502, -7.7999632],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_f0094dd413838f972b8d7a0e428bb8cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a5c8b7fad02413518ade139facb6b1f = $(`<div id="html_4a5c8b7fad02413518ade139facb6b1f" style="width: 100.0%; height: 100.0%;">Carrefour Dar Bouzza - Supermarché</div>`)[0];
+                popup_f0094dd413838f972b8d7a0e428bb8cd.setContent(html_4a5c8b7fad02413518ade139facb6b1f);
+            
+        
+
+        marker_0597a644a053791de358b271332a6ebf.bindPopup(popup_f0094dd413838f972b8d7a0e428bb8cd)
+        ;
+
+        
+    
+    
+            marker_0597a644a053791de358b271332a6ebf.bindTooltip(
+                `<div>
+                     Carrefour Dar Bouzza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5acd380b3644557cd6d7b903b9b63db2 = L.marker(
+                [33.607527, -7.5368732],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_d4c10d04bfa880e2f7e84874522853fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7423695809d2a2339b1f0b8de205efe = $(`<div id="html_e7423695809d2a2339b1f0b8de205efe" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_d4c10d04bfa880e2f7e84874522853fc.setContent(html_e7423695809d2a2339b1f0b8de205efe);
+            
+        
+
+        marker_5acd380b3644557cd6d7b903b9b63db2.bindPopup(popup_d4c10d04bfa880e2f7e84874522853fc)
+        ;
+
+        
+    
+    
+            marker_5acd380b3644557cd6d7b903b9b63db2.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4e218d45603a7bdc727a9f86adab985e = L.marker(
+                [33.6021269, -7.5265618],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_2ba358d05e99df27358ca3831cc5c4b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79f989f2ed02cd4c1dba5d632cfba3dc = $(`<div id="html_79f989f2ed02cd4c1dba5d632cfba3dc" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_2ba358d05e99df27358ca3831cc5c4b2.setContent(html_79f989f2ed02cd4c1dba5d632cfba3dc);
+            
+        
+
+        marker_4e218d45603a7bdc727a9f86adab985e.bindPopup(popup_2ba358d05e99df27358ca3831cc5c4b2)
+        ;
+
+        
+    
+    
+            marker_4e218d45603a7bdc727a9f86adab985e.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4b44c11055054b44485d067f6bd7904d = L.marker(
+                [33.5897236, -7.6297373],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_8a6f055d02c1961c817ef7dc6dc6e437 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a84902552ac4c4aec38b869e0480fe75 = $(`<div id="html_a84902552ac4c4aec38b869e0480fe75" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_8a6f055d02c1961c817ef7dc6dc6e437.setContent(html_a84902552ac4c4aec38b869e0480fe75);
+            
+        
+
+        marker_4b44c11055054b44485d067f6bd7904d.bindPopup(popup_8a6f055d02c1961c817ef7dc6dc6e437)
+        ;
+
+        
+    
+    
+            marker_4b44c11055054b44485d067f6bd7904d.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_adf3b7663d0823a5cc63281d6609af12 = L.marker(
+                [33.5987457, -7.5751282],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_822120cce1ee8b144f9eb1d401d5ba41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e000640fb84eb48cf5b655a38614e240 = $(`<div id="html_e000640fb84eb48cf5b655a38614e240" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_822120cce1ee8b144f9eb1d401d5ba41.setContent(html_e000640fb84eb48cf5b655a38614e240);
+            
+        
+
+        marker_adf3b7663d0823a5cc63281d6609af12.bindPopup(popup_822120cce1ee8b144f9eb1d401d5ba41)
+        ;
+
+        
+    
+    
+            marker_adf3b7663d0823a5cc63281d6609af12.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8c70e109bbd1d2294945320cb4fe2ad0 = L.marker(
+                [33.5379265, -7.680443],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_65e617c2545504b2a79a0eb8e44f6c64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_869b786fda174a0de1447982f121d2b7 = $(`<div id="html_869b786fda174a0de1447982f121d2b7" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_65e617c2545504b2a79a0eb8e44f6c64.setContent(html_869b786fda174a0de1447982f121d2b7);
+            
+        
+
+        marker_8c70e109bbd1d2294945320cb4fe2ad0.bindPopup(popup_65e617c2545504b2a79a0eb8e44f6c64)
+        ;
+
+        
+    
+    
+            marker_8c70e109bbd1d2294945320cb4fe2ad0.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_02ff37943d74f3b02ca7d9ca8fe6742f = L.marker(
+                [33.5737578, -7.6446216],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_48302c0e970460419a9db7fe8c810eba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40af4f37f35b1a265f416f47d3124472 = $(`<div id="html_40af4f37f35b1a265f416f47d3124472" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_48302c0e970460419a9db7fe8c810eba.setContent(html_40af4f37f35b1a265f416f47d3124472);
+            
+        
+
+        marker_02ff37943d74f3b02ca7d9ca8fe6742f.bindPopup(popup_48302c0e970460419a9db7fe8c810eba)
+        ;
+
+        
+    
+    
+            marker_02ff37943d74f3b02ca7d9ca8fe6742f.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8c8cf3fbdd199c3c4e4fcd870bf79b60 = L.marker(
+                [33.531131, -7.6226294],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_775de2877ec96243b6dbce7c4ab62827 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d72f4dd4ff419530152b3ea3129fbc20 = $(`<div id="html_d72f4dd4ff419530152b3ea3129fbc20" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_775de2877ec96243b6dbce7c4ab62827.setContent(html_d72f4dd4ff419530152b3ea3129fbc20);
+            
+        
+
+        marker_8c8cf3fbdd199c3c4e4fcd870bf79b60.bindPopup(popup_775de2877ec96243b6dbce7c4ab62827)
+        ;
+
+        
+    
+    
+            marker_8c8cf3fbdd199c3c4e4fcd870bf79b60.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e3e66bdd0fc0f7fbe70f51b65211a552 = L.marker(
+                [33.5911972, -7.6388189],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_828e4251126ae9758830b12d71e0f778 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ba1f954e44ba59ee531b047d4067f43 = $(`<div id="html_9ba1f954e44ba59ee531b047d4067f43" style="width: 100.0%; height: 100.0%;">Carrefour Express - Supérette / Mini-market</div>`)[0];
+                popup_828e4251126ae9758830b12d71e0f778.setContent(html_9ba1f954e44ba59ee531b047d4067f43);
+            
+        
+
+        marker_e3e66bdd0fc0f7fbe70f51b65211a552.bindPopup(popup_828e4251126ae9758830b12d71e0f778)
+        ;
+
+        
+    
+    
+            marker_e3e66bdd0fc0f7fbe70f51b65211a552.bindTooltip(
+                `<div>
+                     Carrefour Express
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_490a257f4ec81c56ae7527774eae26e7 = L.marker(
+                [33.5667786, -7.6514343],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_ed6dc7dac509f4ffe10013c8dfc7cb0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10ba6150698e5009f979f7781e488977 = $(`<div id="html_10ba6150698e5009f979f7781e488977" style="width: 100.0%; height: 100.0%;">Carrefour Market - Supermarché</div>`)[0];
+                popup_ed6dc7dac509f4ffe10013c8dfc7cb0f.setContent(html_10ba6150698e5009f979f7781e488977);
+            
+        
+
+        marker_490a257f4ec81c56ae7527774eae26e7.bindPopup(popup_ed6dc7dac509f4ffe10013c8dfc7cb0f)
+        ;
+
+        
+    
+    
+            marker_490a257f4ec81c56ae7527774eae26e7.bindTooltip(
+                `<div>
+                     Carrefour Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5012a08731cb57c6ccdc55e66cd81674 = L.marker(
+                [33.5354196, -7.6419162],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_d0de4b47ca82375a6311793c67f0b286 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_194ca3e2ea41613cd1ac66100ca3aadc = $(`<div id="html_194ca3e2ea41613cd1ac66100ca3aadc" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_d0de4b47ca82375a6311793c67f0b286.setContent(html_194ca3e2ea41613cd1ac66100ca3aadc);
+            
+        
+
+        marker_5012a08731cb57c6ccdc55e66cd81674.bindPopup(popup_d0de4b47ca82375a6311793c67f0b286)
+        ;
+
+        
+    
+    
+            marker_5012a08731cb57c6ccdc55e66cd81674.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_24ffd3db181bfa72fbf1c408f55d6745 = L.marker(
+                [33.5375122, -7.6636622],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_20e64e6e3e7eccd95cc1e7a76aa09290 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdc4d4bb1c00ff894d4b8b625611814d = $(`<div id="html_fdc4d4bb1c00ff894d4b8b625611814d" style="width: 100.0%; height: 100.0%;">Carrefour d'Azbane - Supermarché</div>`)[0];
+                popup_20e64e6e3e7eccd95cc1e7a76aa09290.setContent(html_fdc4d4bb1c00ff894d4b8b625611814d);
+            
+        
+
+        marker_24ffd3db181bfa72fbf1c408f55d6745.bindPopup(popup_20e64e6e3e7eccd95cc1e7a76aa09290)
+        ;
+
+        
+    
+    
+            marker_24ffd3db181bfa72fbf1c408f55d6745.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fd13620bacf561cd6a55023cc9134c0d = L.marker(
+                [33.5378775, -7.6630145],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_a1ad1884762be6b2890e21c1931dfba8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a1eca65f9fe53db0acbe03415cbd548 = $(`<div id="html_2a1eca65f9fe53db0acbe03415cbd548" style="width: 100.0%; height: 100.0%;">Carrefour d'Azbane - Supermarché</div>`)[0];
+                popup_a1ad1884762be6b2890e21c1931dfba8.setContent(html_2a1eca65f9fe53db0acbe03415cbd548);
+            
+        
+
+        marker_fd13620bacf561cd6a55023cc9134c0d.bindPopup(popup_a1ad1884762be6b2890e21c1931dfba8)
+        ;
+
+        
+    
+    
+            marker_fd13620bacf561cd6a55023cc9134c0d.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_62b46ec9f7540cb0d25c248ca1079dfb = L.marker(
+                [33.5376046, -7.6637789],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_4b27028525bd43eb17aee39295464615 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_566c6757774b36f273872d139db0644a = $(`<div id="html_566c6757774b36f273872d139db0644a" style="width: 100.0%; height: 100.0%;">Carrefour d'Azbane - Supermarché</div>`)[0];
+                popup_4b27028525bd43eb17aee39295464615.setContent(html_566c6757774b36f273872d139db0644a);
+            
+        
+
+        marker_62b46ec9f7540cb0d25c248ca1079dfb.bindPopup(popup_4b27028525bd43eb17aee39295464615)
+        ;
+
+        
+    
+    
+            marker_62b46ec9f7540cb0d25c248ca1079dfb.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ee12ce38d36c412eb2222ef663b83e2a = L.marker(
+                [33.5383281, -7.6624972],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_7671de2a619abaf4a436097a8ddec855 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e598bd3ecfa7537b0db05e88f0c8fef0 = $(`<div id="html_e598bd3ecfa7537b0db05e88f0c8fef0" style="width: 100.0%; height: 100.0%;">Carrefour d'Azbane - Supermarché</div>`)[0];
+                popup_7671de2a619abaf4a436097a8ddec855.setContent(html_e598bd3ecfa7537b0db05e88f0c8fef0);
+            
+        
+
+        marker_ee12ce38d36c412eb2222ef663b83e2a.bindPopup(popup_7671de2a619abaf4a436097a8ddec855)
+        ;
+
+        
+    
+    
+            marker_ee12ce38d36c412eb2222ef663b83e2a.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4ca6484e255f723b3d706406567ed887 = L.marker(
+                [33.5380952, -7.6632303],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_3ba576099154a8cd2dc6b84067316e6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0deea6471d561d018e2288eca16c0c01 = $(`<div id="html_0deea6471d561d018e2288eca16c0c01" style="width: 100.0%; height: 100.0%;">Carrefour d'Azbane - Supermarché</div>`)[0];
+                popup_3ba576099154a8cd2dc6b84067316e6d.setContent(html_0deea6471d561d018e2288eca16c0c01);
+            
+        
+
+        marker_4ca6484e255f723b3d706406567ed887.bindPopup(popup_3ba576099154a8cd2dc6b84067316e6d)
+        ;
+
+        
+    
+    
+            marker_4ca6484e255f723b3d706406567ed887.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d2d4ea75b50532da954d429dc20bd877 = L.marker(
+                [33.5290416, -7.5930685],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_ab80c0ab123335b4647ee448ff315a42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30d9a9c2845de6621a6d650e45094eb4 = $(`<div id="html_30d9a9c2845de6621a6d650e45094eb4" style="width: 100.0%; height: 100.0%;">Carrefour - Supermarché</div>`)[0];
+                popup_ab80c0ab123335b4647ee448ff315a42.setContent(html_30d9a9c2845de6621a6d650e45094eb4);
+            
+        
+
+        marker_d2d4ea75b50532da954d429dc20bd877.bindPopup(popup_ab80c0ab123335b4647ee448ff315a42)
+        ;
+
+        
+    
+    
+            marker_d2d4ea75b50532da954d429dc20bd877.bindTooltip(
+                `<div>
+                     Carrefour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_60269a802ee9d5d53b857173dabcf9a4 = L.marker(
+                [33.5618694, -7.5946468],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_54c919896ba31acb419307f609553fcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_111ba63ef107581c45798a1b05da2260 = $(`<div id="html_111ba63ef107581c45798a1b05da2260" style="width: 100.0%; height: 100.0%;">Marjane Drissia M6 - Supermarché</div>`)[0];
+                popup_54c919896ba31acb419307f609553fcf.setContent(html_111ba63ef107581c45798a1b05da2260);
+            
+        
+
+        marker_60269a802ee9d5d53b857173dabcf9a4.bindPopup(popup_54c919896ba31acb419307f609553fcf)
+        ;
+
+        
+    
+    
+            marker_60269a802ee9d5d53b857173dabcf9a4.bindTooltip(
+                `<div>
+                     Marjane Drissia M6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b40d1b0c6039ba4387398178934ab1e1 = L.marker(
+                [33.5446703, -7.639958],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_52d1744bdafe554e70d27bde0d995356 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa40f40bd94398c9fba8b62debd5a4da = $(`<div id="html_aa40f40bd94398c9fba8b62debd5a4da" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_52d1744bdafe554e70d27bde0d995356.setContent(html_aa40f40bd94398c9fba8b62debd5a4da);
+            
+        
+
+        marker_b40d1b0c6039ba4387398178934ab1e1.bindPopup(popup_52d1744bdafe554e70d27bde0d995356)
+        ;
+
+        
+    
+    
+            marker_b40d1b0c6039ba4387398178934ab1e1.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6938f80046e821e4f251ace4a46caa4d = L.marker(
+                [33.5958294, -7.5301296],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_8375eeb88337122d462d55f2130b369b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9c2cb7c0fb40cdd9b384d5cd83a2350 = $(`<div id="html_a9c2cb7c0fb40cdd9b384d5cd83a2350" style="width: 100.0%; height: 100.0%;">Marjane Aïn Sbaâ - Supermarché</div>`)[0];
+                popup_8375eeb88337122d462d55f2130b369b.setContent(html_a9c2cb7c0fb40cdd9b384d5cd83a2350);
+            
+        
+
+        marker_6938f80046e821e4f251ace4a46caa4d.bindPopup(popup_8375eeb88337122d462d55f2130b369b)
+        ;
+
+        
+    
+    
+            marker_6938f80046e821e4f251ace4a46caa4d.bindTooltip(
+                `<div>
+                     Marjane Aïn Sbaâ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_47935286a96ddc0c6c0b5ba2ff64aaa4 = L.marker(
+                [33.5746919, -7.7081046],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_6a5bfe60c43128636862de3222644f45 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07708b073e37afa5b50a365f6a6fbfa1 = $(`<div id="html_07708b073e37afa5b50a365f6a6fbfa1" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_6a5bfe60c43128636862de3222644f45.setContent(html_07708b073e37afa5b50a365f6a6fbfa1);
+            
+        
+
+        marker_47935286a96ddc0c6c0b5ba2ff64aaa4.bindPopup(popup_6a5bfe60c43128636862de3222644f45)
+        ;
+
+        
+    
+    
+            marker_47935286a96ddc0c6c0b5ba2ff64aaa4.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a78a2cb91e59ef341a6084598ebf1916 = L.marker(
+                [33.594818, -7.6515874],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_9991bc9b417e7ff81246325603c5f8f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96d9666fcd235c570a60d874138f41e2 = $(`<div id="html_96d9666fcd235c570a60d874138f41e2" style="width: 100.0%; height: 100.0%;">Marjane Market - Supermarché</div>`)[0];
+                popup_9991bc9b417e7ff81246325603c5f8f6.setContent(html_96d9666fcd235c570a60d874138f41e2);
+            
+        
+
+        marker_a78a2cb91e59ef341a6084598ebf1916.bindPopup(popup_9991bc9b417e7ff81246325603c5f8f6)
+        ;
+
+        
+    
+    
+            marker_a78a2cb91e59ef341a6084598ebf1916.bindTooltip(
+                `<div>
+                     Marjane Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ec0745712d51637cbbbfa65e001dbfb9 = L.marker(
+                [33.595682, -7.531687],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_ac49eb870f89e23349f14792d7c3ce2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f6093a6cc5e222e3b87b741caf3dffd = $(`<div id="html_1f6093a6cc5e222e3b87b741caf3dffd" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_ac49eb870f89e23349f14792d7c3ce2a.setContent(html_1f6093a6cc5e222e3b87b741caf3dffd);
+            
+        
+
+        marker_ec0745712d51637cbbbfa65e001dbfb9.bindPopup(popup_ac49eb870f89e23349f14792d7c3ce2a)
+        ;
+
+        
+    
+    
+            marker_ec0745712d51637cbbbfa65e001dbfb9.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5e31e5c8ea98af01e46a25fa91ba27f0 = L.marker(
+                [33.5962524, -7.5321201],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_2a5f2893deb88bb3b09777aba9431b98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a2d14e79802ce2b8adbb3f32530c3a9d = $(`<div id="html_a2d14e79802ce2b8adbb3f32530c3a9d" style="width: 100.0%; height: 100.0%;">Pharmacie Marjane Ain Sebaa - Supermarché</div>`)[0];
+                popup_2a5f2893deb88bb3b09777aba9431b98.setContent(html_a2d14e79802ce2b8adbb3f32530c3a9d);
+            
+        
+
+        marker_5e31e5c8ea98af01e46a25fa91ba27f0.bindPopup(popup_2a5f2893deb88bb3b09777aba9431b98)
+        ;
+
+        
+    
+    
+            marker_5e31e5c8ea98af01e46a25fa91ba27f0.bindTooltip(
+                `<div>
+                     Pharmacie Marjane Ain Sebaa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e9b5cfd2ec836e3c883ed023ba46d81e = L.marker(
+                [33.5743416, -7.65024],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_8d16fc6935904f0e8b6b28329c6dc68f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff640a6d7cbb81b19771e6152a2e8ad2 = $(`<div id="html_ff640a6d7cbb81b19771e6152a2e8ad2" style="width: 100.0%; height: 100.0%;">Marjane Market - Supermarché</div>`)[0];
+                popup_8d16fc6935904f0e8b6b28329c6dc68f.setContent(html_ff640a6d7cbb81b19771e6152a2e8ad2);
+            
+        
+
+        marker_e9b5cfd2ec836e3c883ed023ba46d81e.bindPopup(popup_8d16fc6935904f0e8b6b28329c6dc68f)
+        ;
+
+        
+    
+    
+            marker_e9b5cfd2ec836e3c883ed023ba46d81e.bindTooltip(
+                `<div>
+                     Marjane Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_153c7f765e265f163f5f2e34b7077e3a = L.marker(
+                [33.5957237, -7.5302589],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_ccb670f2e0cf92fa002474eca3bb3559 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a29bbf0f913ea7baccae72168249498 = $(`<div id="html_4a29bbf0f913ea7baccae72168249498" style="width: 100.0%; height: 100.0%;">Marjane Aïn Sbaâ - Supermarché</div>`)[0];
+                popup_ccb670f2e0cf92fa002474eca3bb3559.setContent(html_4a29bbf0f913ea7baccae72168249498);
+            
+        
+
+        marker_153c7f765e265f163f5f2e34b7077e3a.bindPopup(popup_ccb670f2e0cf92fa002474eca3bb3559)
+        ;
+
+        
+    
+    
+            marker_153c7f765e265f163f5f2e34b7077e3a.bindTooltip(
+                `<div>
+                     Marjane Aïn Sbaâ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_36d18c56420cd8e9bb7dd0793d8a5883 = L.marker(
+                [33.5627041, -7.5940106],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_6766750bef6c9d6c9b36381066ea8c54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_375595511a19cbc30b3fe4f10d663d98 = $(`<div id="html_375595511a19cbc30b3fe4f10d663d98" style="width: 100.0%; height: 100.0%;">Marjane Drissia - Supermarché</div>`)[0];
+                popup_6766750bef6c9d6c9b36381066ea8c54.setContent(html_375595511a19cbc30b3fe4f10d663d98);
+            
+        
+
+        marker_36d18c56420cd8e9bb7dd0793d8a5883.bindPopup(popup_6766750bef6c9d6c9b36381066ea8c54)
+        ;
+
+        
+    
+    
+            marker_36d18c56420cd8e9bb7dd0793d8a5883.bindTooltip(
+                `<div>
+                     Marjane Drissia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dbcd019f9716b977218d1801ed2656de = L.marker(
+                [33.5629532, -7.5939177],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_b1784eaffaf04dcc0c3c6a0b1cf27fd7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55e22d5468b0c7efa30be26cf1adf795 = $(`<div id="html_55e22d5468b0c7efa30be26cf1adf795" style="width: 100.0%; height: 100.0%;">Marjane Drissia - Supermarché</div>`)[0];
+                popup_b1784eaffaf04dcc0c3c6a0b1cf27fd7.setContent(html_55e22d5468b0c7efa30be26cf1adf795);
+            
+        
+
+        marker_dbcd019f9716b977218d1801ed2656de.bindPopup(popup_b1784eaffaf04dcc0c3c6a0b1cf27fd7)
+        ;
+
+        
+    
+    
+            marker_dbcd019f9716b977218d1801ed2656de.bindTooltip(
+                `<div>
+                     Marjane Drissia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_75e15fb0676bfa1007ba3164b1a5a27d = L.marker(
+                [33.561581, -7.5948997],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_791cea42399b38ec6575570e70dad614 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_332f16e717361c204a4086643d618e40 = $(`<div id="html_332f16e717361c204a4086643d618e40" style="width: 100.0%; height: 100.0%;">Marjane Drissia M6 - Supermarché</div>`)[0];
+                popup_791cea42399b38ec6575570e70dad614.setContent(html_332f16e717361c204a4086643d618e40);
+            
+        
+
+        marker_75e15fb0676bfa1007ba3164b1a5a27d.bindPopup(popup_791cea42399b38ec6575570e70dad614)
+        ;
+
+        
+    
+    
+            marker_75e15fb0676bfa1007ba3164b1a5a27d.bindTooltip(
+                `<div>
+                     Marjane Drissia M6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_72dab7fe0e0769b6e846e59755542fcc = L.marker(
+                [33.5657963, -7.6765505],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_7b9ecb8225f83894c19b1609c706c239 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_175c4c2164511bf8ff422406df3d2e14 = $(`<div id="html_175c4c2164511bf8ff422406df3d2e14" style="width: 100.0%; height: 100.0%;">Marjane Hay Hassani - Supermarché</div>`)[0];
+                popup_7b9ecb8225f83894c19b1609c706c239.setContent(html_175c4c2164511bf8ff422406df3d2e14);
+            
+        
+
+        marker_72dab7fe0e0769b6e846e59755542fcc.bindPopup(popup_7b9ecb8225f83894c19b1609c706c239)
+        ;
+
+        
+    
+    
+            marker_72dab7fe0e0769b6e846e59755542fcc.bindTooltip(
+                `<div>
+                     Marjane Hay Hassani
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b6c1e9b16483cce2353b3c5d9c223768 = L.marker(
+                [33.5879069, -7.6125249],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_b2a84f2c31bf582e908eb5bc03818c87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f6ee46b5458591643a30ab13a2ee1ee = $(`<div id="html_0f6ee46b5458591643a30ab13a2ee1ee" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_b2a84f2c31bf582e908eb5bc03818c87.setContent(html_0f6ee46b5458591643a30ab13a2ee1ee);
+            
+        
+
+        marker_b6c1e9b16483cce2353b3c5d9c223768.bindPopup(popup_b2a84f2c31bf582e908eb5bc03818c87)
+        ;
+
+        
+    
+    
+            marker_b6c1e9b16483cce2353b3c5d9c223768.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b4ac1e0dead50e150ac2a739a936bb24 = L.marker(
+                [33.59444, -7.6086746],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_2cac672920669e83c838dd5bb3cd359b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3450dbd9ab2de7dd1ef2d82559f1791 = $(`<div id="html_e3450dbd9ab2de7dd1ef2d82559f1791" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_2cac672920669e83c838dd5bb3cd359b.setContent(html_e3450dbd9ab2de7dd1ef2d82559f1791);
+            
+        
+
+        marker_b4ac1e0dead50e150ac2a739a936bb24.bindPopup(popup_2cac672920669e83c838dd5bb3cd359b)
+        ;
+
+        
+    
+    
+            marker_b4ac1e0dead50e150ac2a739a936bb24.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_853c33c0ea6ef9008c1d72af46f08720 = L.marker(
+                [33.5130223, -7.6593739],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_299a78c175fe22cc7af6dd23e903471f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4057653c308c1bf09a0ec7a40f6d5da = $(`<div id="html_b4057653c308c1bf09a0ec7a40f6d5da" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_299a78c175fe22cc7af6dd23e903471f.setContent(html_b4057653c308c1bf09a0ec7a40f6d5da);
+            
+        
+
+        marker_853c33c0ea6ef9008c1d72af46f08720.bindPopup(popup_299a78c175fe22cc7af6dd23e903471f)
+        ;
+
+        
+    
+    
+            marker_853c33c0ea6ef9008c1d72af46f08720.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_009bdc47ef03c12592496a334d7c520a = L.marker(
+                [33.5606342, -7.5934651],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_5158bbbf49603cc396c126940e4dcbf6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a0a2405b65fe7ac068ea8c6ca828345 = $(`<div id="html_1a0a2405b65fe7ac068ea8c6ca828345" style="width: 100.0%; height: 100.0%;">interieur marjane drissia cote autoroute - Supermarché</div>`)[0];
+                popup_5158bbbf49603cc396c126940e4dcbf6.setContent(html_1a0a2405b65fe7ac068ea8c6ca828345);
+            
+        
+
+        marker_009bdc47ef03c12592496a334d7c520a.bindPopup(popup_5158bbbf49603cc396c126940e4dcbf6)
+        ;
+
+        
+    
+    
+            marker_009bdc47ef03c12592496a334d7c520a.bindTooltip(
+                `<div>
+                     interieur marjane drissia cote autoroute
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_074e3b39e35b4c24fc029d4714a13498 = L.marker(
+                [33.5619618, -7.5922072],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_74c991b01f43739d075677cb3549a877 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad0a88ecfe22a8a99bfee8b1cf017050 = $(`<div id="html_ad0a88ecfe22a8a99bfee8b1cf017050" style="width: 100.0%; height: 100.0%;">Bd touria chaoui derriere marjane drissia devant residence fal anour - Supermarché</div>`)[0];
+                popup_74c991b01f43739d075677cb3549a877.setContent(html_ad0a88ecfe22a8a99bfee8b1cf017050);
+            
+        
+
+        marker_074e3b39e35b4c24fc029d4714a13498.bindPopup(popup_74c991b01f43739d075677cb3549a877)
+        ;
+
+        
+    
+    
+            marker_074e3b39e35b4c24fc029d4714a13498.bindTooltip(
+                `<div>
+                     Bd touria chaoui derriere marjane drissia devant residence fal anour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f3e0f27b46ab1dce2c566647fd4937f7 = L.marker(
+                [33.5627218, -7.5931433],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_e79a390a6d1622ca69945d5ce7842eeb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88bb6e350f69abef55757d9317d57ad9 = $(`<div id="html_88bb6e350f69abef55757d9317d57ad9" style="width: 100.0%; height: 100.0%;">Derriere marjane drissia enface centre العمل الاجتماعي النسوي - Supermarché</div>`)[0];
+                popup_e79a390a6d1622ca69945d5ce7842eeb.setContent(html_88bb6e350f69abef55757d9317d57ad9);
+            
+        
+
+        marker_f3e0f27b46ab1dce2c566647fd4937f7.bindPopup(popup_e79a390a6d1622ca69945d5ce7842eeb)
+        ;
+
+        
+    
+    
+            marker_f3e0f27b46ab1dce2c566647fd4937f7.bindTooltip(
+                `<div>
+                     Derriere marjane drissia enface centre العمل الاجتماعي النسوي
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d61c1a4eeea58674915ef9821d4d6889 = L.marker(
+                [33.5623217, -7.5927812],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_9ae9e88bcf7ac5ae13107864f5293f70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7325e5e346cff98bd460781dd9f8470 = $(`<div id="html_e7325e5e346cff98bd460781dd9f8470" style="width: 100.0%; height: 100.0%;">Derriere marjane drissia a cite de porte de chargement - Supermarché</div>`)[0];
+                popup_9ae9e88bcf7ac5ae13107864f5293f70.setContent(html_e7325e5e346cff98bd460781dd9f8470);
+            
+        
+
+        marker_d61c1a4eeea58674915ef9821d4d6889.bindPopup(popup_9ae9e88bcf7ac5ae13107864f5293f70)
+        ;
+
+        
+    
+    
+            marker_d61c1a4eeea58674915ef9821d4d6889.bindTooltip(
+                `<div>
+                     Derriere marjane drissia a cite de porte de chargement
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_33f1e3a3de74c056cea082a05fd6b65c = L.marker(
+                [33.5610432, -7.5948465],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_0506045425f283e3334c42f992600a3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29a369db25459598237adbd99ec07d42 = $(`<div id="html_29a369db25459598237adbd99ec07d42" style="width: 100.0%; height: 100.0%;">Souk des bois Bd med vi enface electroplanete marjane drissia - Supermarché</div>`)[0];
+                popup_0506045425f283e3334c42f992600a3e.setContent(html_29a369db25459598237adbd99ec07d42);
+            
+        
+
+        marker_33f1e3a3de74c056cea082a05fd6b65c.bindPopup(popup_0506045425f283e3334c42f992600a3e)
+        ;
+
+        
+    
+    
+            marker_33f1e3a3de74c056cea082a05fd6b65c.bindTooltip(
+                `<div>
+                     Souk des bois Bd med vi enface electroplanete marjane drissia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e6e59e7d7a45c04b4b0948109faeaa88 = L.marker(
+                [33.5629341, -7.5912872],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_9b8cba702b70ef3cd88e9184c445a26e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4aa5ede2ab7ffd42ef5b22b84724cb8d = $(`<div id="html_4aa5ede2ab7ffd42ef5b22b84724cb8d" style="width: 100.0%; height: 100.0%;">Rue 30 angle rue 28 hay drissia2 cote marjane - Supermarché</div>`)[0];
+                popup_9b8cba702b70ef3cd88e9184c445a26e.setContent(html_4aa5ede2ab7ffd42ef5b22b84724cb8d);
+            
+        
+
+        marker_e6e59e7d7a45c04b4b0948109faeaa88.bindPopup(popup_9b8cba702b70ef3cd88e9184c445a26e)
+        ;
+
+        
+    
+    
+            marker_e6e59e7d7a45c04b4b0948109faeaa88.bindTooltip(
+                `<div>
+                     Rue 30 angle rue 28 hay drissia2 cote marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0645d06cc86b210eb8bfc7aea27730f5 = L.marker(
+                [33.5626011, -7.5945568],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_1f35a32102310ce7c659e77210afc1c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56cc384afbfc72fa110979a7d6c6b4bc = $(`<div id="html_56cc384afbfc72fa110979a7d6c6b4bc" style="width: 100.0%; height: 100.0%;">Bd bouchaib doukali angle bd led 6 enface porte principale marjane - Supermarché</div>`)[0];
+                popup_1f35a32102310ce7c659e77210afc1c6.setContent(html_56cc384afbfc72fa110979a7d6c6b4bc);
+            
+        
+
+        marker_0645d06cc86b210eb8bfc7aea27730f5.bindPopup(popup_1f35a32102310ce7c659e77210afc1c6)
+        ;
+
+        
+    
+    
+            marker_0645d06cc86b210eb8bfc7aea27730f5.bindTooltip(
+                `<div>
+                     Bd bouchaib doukali angle bd led 6 enface porte principale marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_df611e866caa57f9d02aa1c900ae3e4d = L.marker(
+                [33.4753036, -7.6069947],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_f93135cff14d17a4e2fd93d0ac3417da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfefb0a7bfae670cedb12b577d4cf10c = $(`<div id="html_cfefb0a7bfae670cedb12b577d4cf10c" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_f93135cff14d17a4e2fd93d0ac3417da.setContent(html_cfefb0a7bfae670cedb12b577d4cf10c);
+            
+        
+
+        marker_df611e866caa57f9d02aa1c900ae3e4d.bindPopup(popup_f93135cff14d17a4e2fd93d0ac3417da)
+        ;
+
+        
+    
+    
+            marker_df611e866caa57f9d02aa1c900ae3e4d.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1a0d1c8cc8eab5821d98a31c3e6ea789 = L.marker(
+                [33.566764, -7.6559254],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_7d14c5cdc4dd40db607511246747ec34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b12c2d124b8da254dc5cadefa9ad9fe8 = $(`<div id="html_b12c2d124b8da254dc5cadefa9ad9fe8" style="width: 100.0%; height: 100.0%;">Marjane Market مرجان ماركت - Supermarché</div>`)[0];
+                popup_7d14c5cdc4dd40db607511246747ec34.setContent(html_b12c2d124b8da254dc5cadefa9ad9fe8);
+            
+        
+
+        marker_1a0d1c8cc8eab5821d98a31c3e6ea789.bindPopup(popup_7d14c5cdc4dd40db607511246747ec34)
+        ;
+
+        
+    
+    
+            marker_1a0d1c8cc8eab5821d98a31c3e6ea789.bindTooltip(
+                `<div>
+                     Marjane Market مرجان ماركت
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_47d1d3b98cd19a61acf015d7054e6f97 = L.marker(
+                [33.5608884, -7.5615566],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_746860796e12e1c6a68d1f7cb17d0dc7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d209347e8d63d11e2f9a4ca30fa43fb7 = $(`<div id="html_d209347e8d63d11e2f9a4ca30fa43fb7" style="width: 100.0%; height: 100.0%;">Sidi Othmane - Marjane - Supermarché</div>`)[0];
+                popup_746860796e12e1c6a68d1f7cb17d0dc7.setContent(html_d209347e8d63d11e2f9a4ca30fa43fb7);
+            
+        
+
+        marker_47d1d3b98cd19a61acf015d7054e6f97.bindPopup(popup_746860796e12e1c6a68d1f7cb17d0dc7)
+        ;
+
+        
+    
+    
+            marker_47d1d3b98cd19a61acf015d7054e6f97.bindTooltip(
+                `<div>
+                     Sidi Othmane - Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_71a74f3f8f9fedfa28438c9b7536bb4b = L.marker(
+                [33.5607332, -7.5614891],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_f16808915179ab6cb4c559cc02b4934f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d39c88be8c7383dbfc80fd79cfc84fa2 = $(`<div id="html_d39c88be8c7383dbfc80fd79cfc84fa2" style="width: 100.0%; height: 100.0%;">Sidi Othmane - Marjane - Supermarché</div>`)[0];
+                popup_f16808915179ab6cb4c559cc02b4934f.setContent(html_d39c88be8c7383dbfc80fd79cfc84fa2);
+            
+        
+
+        marker_71a74f3f8f9fedfa28438c9b7536bb4b.bindPopup(popup_f16808915179ab6cb4c559cc02b4934f)
+        ;
+
+        
+    
+    
+            marker_71a74f3f8f9fedfa28438c9b7536bb4b.bindTooltip(
+                `<div>
+                     Sidi Othmane - Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_176552d9d2ebb73368fb929d0806d01b = L.marker(
+                [33.5859021, -7.5930568],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_06b8d3a84e8031f7573f20867d595927 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f60c62acaa4a0102eb29e83937de264 = $(`<div id="html_9f60c62acaa4a0102eb29e83937de264" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_06b8d3a84e8031f7573f20867d595927.setContent(html_9f60c62acaa4a0102eb29e83937de264);
+            
+        
+
+        marker_176552d9d2ebb73368fb929d0806d01b.bindPopup(popup_06b8d3a84e8031f7573f20867d595927)
+        ;
+
+        
+    
+    
+            marker_176552d9d2ebb73368fb929d0806d01b.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a2dcd79b256d04cdf4a491a1a4de0829 = L.marker(
+                [33.5632914, -7.6637711],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_a7062a7ffac2f89143274237a16cdfe5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf931ab3e0401bdf9443106ce7ccbd6e = $(`<div id="html_bf931ab3e0401bdf9443106ce7ccbd6e" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_a7062a7ffac2f89143274237a16cdfe5.setContent(html_bf931ab3e0401bdf9443106ce7ccbd6e);
+            
+        
+
+        marker_a2dcd79b256d04cdf4a491a1a4de0829.bindPopup(popup_a7062a7ffac2f89143274237a16cdfe5)
+        ;
+
+        
+    
+    
+            marker_a2dcd79b256d04cdf4a491a1a4de0829.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_31c8fa9c7ec4b65dc2c1da6367ef8a53 = L.marker(
+                [33.544542, -7.6423514],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_393118ec4ad47cd36e61452844592609 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d124cb71208a3bee28263ecf11d05c5 = $(`<div id="html_8d124cb71208a3bee28263ecf11d05c5" style="width: 100.0%; height: 100.0%;">Marjane Californie - Supermarché</div>`)[0];
+                popup_393118ec4ad47cd36e61452844592609.setContent(html_8d124cb71208a3bee28263ecf11d05c5);
+            
+        
+
+        marker_31c8fa9c7ec4b65dc2c1da6367ef8a53.bindPopup(popup_393118ec4ad47cd36e61452844592609)
+        ;
+
+        
+    
+    
+            marker_31c8fa9c7ec4b65dc2c1da6367ef8a53.bindTooltip(
+                `<div>
+                     Marjane Californie
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0da4bf79f47181009a8c7b830ae32565 = L.marker(
+                [33.5446148, -7.6419546],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_7e3b08c67c10f2f80855b7dfc5bcf9a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7078f304d1ad2420707602c4f939871 = $(`<div id="html_b7078f304d1ad2420707602c4f939871" style="width: 100.0%; height: 100.0%;">Marjane Californie - Supermarché</div>`)[0];
+                popup_7e3b08c67c10f2f80855b7dfc5bcf9a1.setContent(html_b7078f304d1ad2420707602c4f939871);
+            
+        
+
+        marker_0da4bf79f47181009a8c7b830ae32565.bindPopup(popup_7e3b08c67c10f2f80855b7dfc5bcf9a1)
+        ;
+
+        
+    
+    
+            marker_0da4bf79f47181009a8c7b830ae32565.bindTooltip(
+                `<div>
+                     Marjane Californie
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b5397035c86a60dee90139a98d42d2a6 = L.marker(
+                [33.58076, -7.6415292],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_ced5faba31c89a7857ff78ff16e8ceac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_233664a0df378c4fcaa6297bf0b97082 = $(`<div id="html_233664a0df378c4fcaa6297bf0b97082" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_ced5faba31c89a7857ff78ff16e8ceac.setContent(html_233664a0df378c4fcaa6297bf0b97082);
+            
+        
+
+        marker_b5397035c86a60dee90139a98d42d2a6.bindPopup(popup_ced5faba31c89a7857ff78ff16e8ceac)
+        ;
+
+        
+    
+    
+            marker_b5397035c86a60dee90139a98d42d2a6.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_581aca764326cdbc891ffebf2f2a00de = L.marker(
+                [33.5785138, -7.6243943],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_5e9d9cd218d935012c50fbcdb855f4c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f1d3c5562010ff248117f840fb047a7 = $(`<div id="html_2f1d3c5562010ff248117f840fb047a7" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_5e9d9cd218d935012c50fbcdb855f4c0.setContent(html_2f1d3c5562010ff248117f840fb047a7);
+            
+        
+
+        marker_581aca764326cdbc891ffebf2f2a00de.bindPopup(popup_5e9d9cd218d935012c50fbcdb855f4c0)
+        ;
+
+        
+    
+    
+            marker_581aca764326cdbc891ffebf2f2a00de.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0be40129b564d2f55ef306008cec08ab = L.marker(
+                [33.597159, -7.6626748],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_ab1c017a26424570cc890550f2b051b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12f1490a25e96c811ed283def7ab5fc0 = $(`<div id="html_12f1490a25e96c811ed283def7ab5fc0" style="width: 100.0%; height: 100.0%;">Rue Al Marjane - Supermarché</div>`)[0];
+                popup_ab1c017a26424570cc890550f2b051b6.setContent(html_12f1490a25e96c811ed283def7ab5fc0);
+            
+        
+
+        marker_0be40129b564d2f55ef306008cec08ab.bindPopup(popup_ab1c017a26424570cc890550f2b051b6)
+        ;
+
+        
+    
+    
+            marker_0be40129b564d2f55ef306008cec08ab.bindTooltip(
+                `<div>
+                     Rue Al Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7fcc4bf8c8da6e62059b8491ac6ff972 = L.marker(
+                [33.5616025, -7.5935293],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_c196a666d675ec2a9b99f1e199ec25b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22fb4da32f693f8cfc24b86e62441673 = $(`<div id="html_22fb4da32f693f8cfc24b86e62441673" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_c196a666d675ec2a9b99f1e199ec25b8.setContent(html_22fb4da32f693f8cfc24b86e62441673);
+            
+        
+
+        marker_7fcc4bf8c8da6e62059b8491ac6ff972.bindPopup(popup_c196a666d675ec2a9b99f1e199ec25b8)
+        ;
+
+        
+    
+    
+            marker_7fcc4bf8c8da6e62059b8491ac6ff972.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_79e7d3f9113d965b68622b8169af5a2e = L.marker(
+                [33.5602836, -7.5614755],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_47912f321b39071587af0651bf7f3402 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b727be0b9e92b038e46413ff7781d2a8 = $(`<div id="html_b727be0b9e92b038e46413ff7781d2a8" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_47912f321b39071587af0651bf7f3402.setContent(html_b727be0b9e92b038e46413ff7781d2a8);
+            
+        
+
+        marker_79e7d3f9113d965b68622b8169af5a2e.bindPopup(popup_47912f321b39071587af0651bf7f3402)
+        ;
+
+        
+    
+    
+            marker_79e7d3f9113d965b68622b8169af5a2e.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_16d1cd50d744d2ce24cffa9cffa49576 = L.marker(
+                [33.5459358, -7.5495858],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_8f045646e1ccfb369f051540c0bf86f8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2fca4596111e9f8f0bca517bec1de5fc = $(`<div id="html_2fca4596111e9f8f0bca517bec1de5fc" style="width: 100.0%; height: 100.0%;">Marjane Sidi Othmane - Supermarché</div>`)[0];
+                popup_8f045646e1ccfb369f051540c0bf86f8.setContent(html_2fca4596111e9f8f0bca517bec1de5fc);
+            
+        
+
+        marker_16d1cd50d744d2ce24cffa9cffa49576.bindPopup(popup_8f045646e1ccfb369f051540c0bf86f8)
+        ;
+
+        
+    
+    
+            marker_16d1cd50d744d2ce24cffa9cffa49576.bindTooltip(
+                `<div>
+                     Marjane Sidi Othmane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f29924bfc2a2665f768e7940b4d9306c = L.marker(
+                [33.5879624, -7.640294],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_ea8132da831c1a53f21a67f76a56aad2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dada44c5e01aa654ace680f0c6ae3cc4 = $(`<div id="html_dada44c5e01aa654ace680f0c6ae3cc4" style="width: 100.0%; height: 100.0%;">Résidence Marjane إقامة مرجان - Supermarché</div>`)[0];
+                popup_ea8132da831c1a53f21a67f76a56aad2.setContent(html_dada44c5e01aa654ace680f0c6ae3cc4);
+            
+        
+
+        marker_f29924bfc2a2665f768e7940b4d9306c.bindPopup(popup_ea8132da831c1a53f21a67f76a56aad2)
+        ;
+
+        
+    
+    
+            marker_f29924bfc2a2665f768e7940b4d9306c.bindTooltip(
+                `<div>
+                     Résidence Marjane إقامة مرجان
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b567b134aac3b91274ad9768065810fc = L.marker(
+                [33.5662976, -7.6760715],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_f72cea07dbf68d83e4a0e1b1312626f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a14735a927ce30172c414a96459e2df = $(`<div id="html_2a14735a927ce30172c414a96459e2df" style="width: 100.0%; height: 100.0%;">Marjane - Supermarché</div>`)[0];
+                popup_f72cea07dbf68d83e4a0e1b1312626f6.setContent(html_2a14735a927ce30172c414a96459e2df);
+            
+        
+
+        marker_b567b134aac3b91274ad9768065810fc.bindPopup(popup_f72cea07dbf68d83e4a0e1b1312626f6)
+        ;
+
+        
+    
+    
+            marker_b567b134aac3b91274ad9768065810fc.bindTooltip(
+                `<div>
+                     Marjane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_88078d892a6bd07cf6b8b11b4c984549 = L.marker(
+                [33.5970845, -7.5815519],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_ab18a0b9075bcfd6a31dc1d7ed8dfc52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10e1e8e135ed95a7892aa5f53d765c78 = $(`<div id="html_10e1e8e135ed95a7892aa5f53d765c78" style="width: 100.0%; height: 100.0%;">L139 Marjane Aïn Sbaâ - Hôpital Sofi - Supermarché</div>`)[0];
+                popup_ab18a0b9075bcfd6a31dc1d7ed8dfc52.setContent(html_10e1e8e135ed95a7892aa5f53d765c78);
+            
+        
+
+        marker_88078d892a6bd07cf6b8b11b4c984549.bindPopup(popup_ab18a0b9075bcfd6a31dc1d7ed8dfc52)
+        ;
+
+        
+    
+    
+            marker_88078d892a6bd07cf6b8b11b4c984549.bindTooltip(
+                `<div>
+                     L139 Marjane Aïn Sbaâ - Hôpital Sofi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8fbcc76a63ee1ee95e6466c4734ef9e7 = L.marker(
+                [33.5970534, -7.5816907],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_b38c6a4ba47a72275c973a3302d4a56e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1504a9ee7d069f6fb3d92e0aa1d7d2cc = $(`<div id="html_1504a9ee7d069f6fb3d92e0aa1d7d2cc" style="width: 100.0%; height: 100.0%;">L139 Hôpital Sofi - Marjane Aïn Sbaâ - Supermarché</div>`)[0];
+                popup_b38c6a4ba47a72275c973a3302d4a56e.setContent(html_1504a9ee7d069f6fb3d92e0aa1d7d2cc);
+            
+        
+
+        marker_8fbcc76a63ee1ee95e6466c4734ef9e7.bindPopup(popup_b38c6a4ba47a72275c973a3302d4a56e)
+        ;
+
+        
+    
+    
+            marker_8fbcc76a63ee1ee95e6466c4734ef9e7.bindTooltip(
+                `<div>
+                     L139 Hôpital Sofi - Marjane Aïn Sbaâ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_311de9e15529c69f7d7ec36a60fb1fe4 = L.marker(
+                [33.5623474, -7.5941062],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_dd4c5e77b43d53f42492e6af40c9d7a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9098f131ddb2fb6ea5de6fef3cd72eaa = $(`<div id="html_9098f131ddb2fb6ea5de6fef3cd72eaa" style="width: 100.0%; height: 100.0%;">McDonald's - Restaurant</div>`)[0];
+                popup_dd4c5e77b43d53f42492e6af40c9d7a9.setContent(html_9098f131ddb2fb6ea5de6fef3cd72eaa);
+            
+        
+
+        marker_311de9e15529c69f7d7ec36a60fb1fe4.bindPopup(popup_dd4c5e77b43d53f42492e6af40c9d7a9)
+        ;
+
+        
+    
+    
+            marker_311de9e15529c69f7d7ec36a60fb1fe4.bindTooltip(
+                `<div>
+                     McDonald's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_39366785ed989776f9058aac50ab3c89 = L.marker(
+                [33.5759477, -7.6153091],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_da54c796ced648510b29a6fd89b067cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3d24fed91f798667aaf555933d0dbf3 = $(`<div id="html_b3d24fed91f798667aaf555933d0dbf3" style="width: 100.0%; height: 100.0%;">McDonald's - Restaurant</div>`)[0];
+                popup_da54c796ced648510b29a6fd89b067cd.setContent(html_b3d24fed91f798667aaf555933d0dbf3);
+            
+        
+
+        marker_39366785ed989776f9058aac50ab3c89.bindPopup(popup_da54c796ced648510b29a6fd89b067cd)
+        ;
+
+        
+    
+    
+            marker_39366785ed989776f9058aac50ab3c89.bindTooltip(
+                `<div>
+                     McDonald's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8d2e4edd9518bd473a1297fc363df1d9 = L.marker(
+                [33.5881192, -7.6175943],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_1de2432add382a0cba5c6bb5d377f6af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6683224b06ceb83657fbfb27b907407a = $(`<div id="html_6683224b06ceb83657fbfb27b907407a" style="width: 100.0%; height: 100.0%;">McDonald's - Restaurant</div>`)[0];
+                popup_1de2432add382a0cba5c6bb5d377f6af.setContent(html_6683224b06ceb83657fbfb27b907407a);
+            
+        
+
+        marker_8d2e4edd9518bd473a1297fc363df1d9.bindPopup(popup_1de2432add382a0cba5c6bb5d377f6af)
+        ;
+
+        
+    
+    
+            marker_8d2e4edd9518bd473a1297fc363df1d9.bindTooltip(
+                `<div>
+                     McDonald's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f27a8e2d6bbe8496fa671150d598cc43 = L.marker(
+                [33.5858757, -7.5928149],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_897c49e926400824616fd7e46a794b33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ffb7857d60896eb7f562c40815c5b2f = $(`<div id="html_0ffb7857d60896eb7f562c40815c5b2f" style="width: 100.0%; height: 100.0%;">McDonald's - Restaurant</div>`)[0];
+                popup_897c49e926400824616fd7e46a794b33.setContent(html_0ffb7857d60896eb7f562c40815c5b2f);
+            
+        
+
+        marker_f27a8e2d6bbe8496fa671150d598cc43.bindPopup(popup_897c49e926400824616fd7e46a794b33)
+        ;
+
+        
+    
+    
+            marker_f27a8e2d6bbe8496fa671150d598cc43.bindTooltip(
+                `<div>
+                     McDonald's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_db269b6f2d398ede8f96d792fe649ca4 = L.marker(
+                [33.5861117, -7.6368073],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_9f304463ad9c65ab0482f957bbe58e8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5cb8f3f63563f545ed9b624ecbc3563 = $(`<div id="html_d5cb8f3f63563f545ed9b624ecbc3563" style="width: 100.0%; height: 100.0%;">KFC - Restaurant</div>`)[0];
+                popup_9f304463ad9c65ab0482f957bbe58e8f.setContent(html_d5cb8f3f63563f545ed9b624ecbc3563);
+            
+        
+
+        marker_db269b6f2d398ede8f96d792fe649ca4.bindPopup(popup_9f304463ad9c65ab0482f957bbe58e8f)
+        ;
+
+        
+    
+    
+            marker_db269b6f2d398ede8f96d792fe649ca4.bindTooltip(
+                `<div>
+                     KFC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_283235cd753b1afbc1a7365b62111e24 = L.marker(
+                [33.595602, -7.6174129],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_0a0ee0281530fc73c117878937d17119 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1587a32f59d5c35f9ac2bfad8e853fec = $(`<div id="html_1587a32f59d5c35f9ac2bfad8e853fec" style="width: 100.0%; height: 100.0%;">KFC - Restaurant</div>`)[0];
+                popup_0a0ee0281530fc73c117878937d17119.setContent(html_1587a32f59d5c35f9ac2bfad8e853fec);
+            
+        
+
+        marker_283235cd753b1afbc1a7365b62111e24.bindPopup(popup_0a0ee0281530fc73c117878937d17119)
+        ;
+
+        
+    
+    
+            marker_283235cd753b1afbc1a7365b62111e24.bindTooltip(
+                `<div>
+                     KFC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1e1e022af9e4d96657ffdc69bb83575f = L.marker(
+                [33.5928524, -7.6318233],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_dc9bb43e363b493e959b1b911b59a00e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_657d47a6d9dda41a7a2701015bd5fc9b = $(`<div id="html_657d47a6d9dda41a7a2701015bd5fc9b" style="width: 100.0%; height: 100.0%;">KFC - Restaurant</div>`)[0];
+                popup_dc9bb43e363b493e959b1b911b59a00e.setContent(html_657d47a6d9dda41a7a2701015bd5fc9b);
+            
+        
+
+        marker_1e1e022af9e4d96657ffdc69bb83575f.bindPopup(popup_dc9bb43e363b493e959b1b911b59a00e)
+        ;
+
+        
+    
+    
+            marker_1e1e022af9e4d96657ffdc69bb83575f.bindTooltip(
+                `<div>
+                     KFC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bdf8b850c5c3db54ef9aad6db884b8b9 = L.marker(
+                [33.5753667, -7.6156108],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_63f5f8b5595949e4332104bc71875054 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7c49748f2b4a1c7256c481aef4e7a34 = $(`<div id="html_d7c49748f2b4a1c7256c481aef4e7a34" style="width: 100.0%; height: 100.0%;">KFC - Restaurant</div>`)[0];
+                popup_63f5f8b5595949e4332104bc71875054.setContent(html_d7c49748f2b4a1c7256c481aef4e7a34);
+            
+        
+
+        marker_bdf8b850c5c3db54ef9aad6db884b8b9.bindPopup(popup_63f5f8b5595949e4332104bc71875054)
+        ;
+
+        
+    
+    
+            marker_bdf8b850c5c3db54ef9aad6db884b8b9.bindTooltip(
+                `<div>
+                     KFC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1063b746a1b87361c63d83cb3d8952a3 = L.marker(
+                [33.5764438, -7.7065764],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_2baf942e13705ea8caecf6d40801843d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2db64d226bb3de5fb81b257c0dcb64b2 = $(`<div id="html_2db64d226bb3de5fb81b257c0dcb64b2" style="width: 100.0%; height: 100.0%;">KFC - Restaurant</div>`)[0];
+                popup_2baf942e13705ea8caecf6d40801843d.setContent(html_2db64d226bb3de5fb81b257c0dcb64b2);
+            
+        
+
+        marker_1063b746a1b87361c63d83cb3d8952a3.bindPopup(popup_2baf942e13705ea8caecf6d40801843d)
+        ;
+
+        
+    
+    
+            marker_1063b746a1b87361c63d83cb3d8952a3.bindTooltip(
+                `<div>
+                     KFC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_24e4664151b849736615aeda3dc981a2 = L.marker(
+                [33.5873876, -7.6850644],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_0d39233be9851bc1338b58bc6f24386e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f644a9cecb9a798c0c447c475b212562 = $(`<div id="html_f644a9cecb9a798c0c447c475b212562" style="width: 100.0%; height: 100.0%;">KFC - Restaurant</div>`)[0];
+                popup_0d39233be9851bc1338b58bc6f24386e.setContent(html_f644a9cecb9a798c0c447c475b212562);
+            
+        
+
+        marker_24e4664151b849736615aeda3dc981a2.bindPopup(popup_0d39233be9851bc1338b58bc6f24386e)
+        ;
+
+        
+    
+    
+            marker_24e4664151b849736615aeda3dc981a2.bindTooltip(
+                `<div>
+                     KFC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c2ff89e247f1aa87621c5b145195e626 = L.marker(
+                [33.5731, -7.5898],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_1b04883903646f13c574f1c995aee143 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9ccb24abfc5aa36d31cab03f6a4f8eb = $(`<div id="html_a9ccb24abfc5aa36d31cab03f6a4f8eb" style="width: 100.0%; height: 100.0%;">Carrefour Centre Ville - Supermarché</div>`)[0];
+                popup_1b04883903646f13c574f1c995aee143.setContent(html_a9ccb24abfc5aa36d31cab03f6a4f8eb);
+            
+        
+
+        marker_c2ff89e247f1aa87621c5b145195e626.bindPopup(popup_1b04883903646f13c574f1c995aee143)
+        ;
+
+        
+    
+    
+            marker_c2ff89e247f1aa87621c5b145195e626.bindTooltip(
+                `<div>
+                     Carrefour Centre Ville
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_353d4aea7c7e07e88b4e12b8e77bddf0 = L.marker(
+                [33.5981, -7.6644],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_632fb94998c374e67df242c31fc9a9c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78a38ae5539b901845041aa6ea3e739a = $(`<div id="html_78a38ae5539b901845041aa6ea3e739a" style="width: 100.0%; height: 100.0%;">Carrefour Ain Diab - Supermarché</div>`)[0];
+                popup_632fb94998c374e67df242c31fc9a9c6.setContent(html_78a38ae5539b901845041aa6ea3e739a);
+            
+        
+
+        marker_353d4aea7c7e07e88b4e12b8e77bddf0.bindPopup(popup_632fb94998c374e67df242c31fc9a9c6)
+        ;
+
+        
+    
+    
+            marker_353d4aea7c7e07e88b4e12b8e77bddf0.bindTooltip(
+                `<div>
+                     Carrefour Ain Diab
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_61c2d28dfef2100bd2bd6c7eb0c3dd07 = L.marker(
+                [33.5908, -7.6462],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_f862521b05aef6e423ee65ed8b7890f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec1f8a0e519f762f7f92a4151a97854d = $(`<div id="html_ec1f8a0e519f762f7f92a4151a97854d" style="width: 100.0%; height: 100.0%;">Carrefour Maarif - Supermarché</div>`)[0];
+                popup_f862521b05aef6e423ee65ed8b7890f4.setContent(html_ec1f8a0e519f762f7f92a4151a97854d);
+            
+        
+
+        marker_61c2d28dfef2100bd2bd6c7eb0c3dd07.bindPopup(popup_f862521b05aef6e423ee65ed8b7890f4)
+        ;
+
+        
+    
+    
+            marker_61c2d28dfef2100bd2bd6c7eb0c3dd07.bindTooltip(
+                `<div>
+                     Carrefour Maarif
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_77835d3e13ad6daf1220bd28878be98e = L.marker(
+                [33.5625, -7.6331],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_1933b4ea37b784d092384989a4800e6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34ff765234b121c81e2077e50c50724b = $(`<div id="html_34ff765234b121c81e2077e50c50724b" style="width: 100.0%; height: 100.0%;">Marjane Derb Ghallef - Supermarché</div>`)[0];
+                popup_1933b4ea37b784d092384989a4800e6e.setContent(html_34ff765234b121c81e2077e50c50724b);
+            
+        
+
+        marker_77835d3e13ad6daf1220bd28878be98e.bindPopup(popup_1933b4ea37b784d092384989a4800e6e)
+        ;
+
+        
+    
+    
+            marker_77835d3e13ad6daf1220bd28878be98e.bindTooltip(
+                `<div>
+                     Marjane Derb Ghallef
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f85fa20009665413a260151243a311f2 = L.marker(
+                [33.5456, -7.6789],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_c4bbd164cdc24bdc5b15d2dc846809fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_293cbbb804092ed7504d402dca6bd80a = $(`<div id="html_293cbbb804092ed7504d402dca6bd80a" style="width: 100.0%; height: 100.0%;">Marjane California - Supermarché</div>`)[0];
+                popup_c4bbd164cdc24bdc5b15d2dc846809fc.setContent(html_293cbbb804092ed7504d402dca6bd80a);
+            
+        
+
+        marker_f85fa20009665413a260151243a311f2.bindPopup(popup_c4bbd164cdc24bdc5b15d2dc846809fc)
+        ;
+
+        
+    
+    
+            marker_f85fa20009665413a260151243a311f2.bindTooltip(
+                `<div>
+                     Marjane California
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8f6b657b4bebc65337f91d09c810e81f = L.marker(
+                [33.6012, -7.6123],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_00bf67cfc23aa299350b88f578042d0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f8ee50496eb94a56371b62cfd66619ce = $(`<div id="html_f8ee50496eb94a56371b62cfd66619ce" style="width: 100.0%; height: 100.0%;">Marjane Racine - Supermarché</div>`)[0];
+                popup_00bf67cfc23aa299350b88f578042d0f.setContent(html_f8ee50496eb94a56371b62cfd66619ce);
+            
+        
+
+        marker_8f6b657b4bebc65337f91d09c810e81f.bindPopup(popup_00bf67cfc23aa299350b88f578042d0f)
+        ;
+
+        
+    
+    
+            marker_8f6b657b4bebc65337f91d09c810e81f.bindTooltip(
+                `<div>
+                     Marjane Racine
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_38e03f3ef58079a779a528cc33181399 = L.marker(
+                [33.5723, -7.6234],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_469a2c69c295bb77e8bc0d4c313f467d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_137cd04fc9bcfd53aeaa7d70c9b5d671 = $(`<div id="html_137cd04fc9bcfd53aeaa7d70c9b5d671" style="width: 100.0%; height: 100.0%;">BIM Centre - Supérette / Mini-market</div>`)[0];
+                popup_469a2c69c295bb77e8bc0d4c313f467d.setContent(html_137cd04fc9bcfd53aeaa7d70c9b5d671);
+            
+        
+
+        marker_38e03f3ef58079a779a528cc33181399.bindPopup(popup_469a2c69c295bb77e8bc0d4c313f467d)
+        ;
+
+        
+    
+    
+            marker_38e03f3ef58079a779a528cc33181399.bindTooltip(
+                `<div>
+                     BIM Centre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_57fd6f0140d6ce29f0f4c1e70465afc4 = L.marker(
+                [33.5834, -7.6456],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_bb94e1c6991542bb8f3d7e4842172b3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54555b5ade4b946e531e9dd5a41b84cb = $(`<div id="html_54555b5ade4b946e531e9dd5a41b84cb" style="width: 100.0%; height: 100.0%;">BIM Hay Hassani - Supérette / Mini-market</div>`)[0];
+                popup_bb94e1c6991542bb8f3d7e4842172b3c.setContent(html_54555b5ade4b946e531e9dd5a41b84cb);
+            
+        
+
+        marker_57fd6f0140d6ce29f0f4c1e70465afc4.bindPopup(popup_bb94e1c6991542bb8f3d7e4842172b3c)
+        ;
+
+        
+    
+    
+            marker_57fd6f0140d6ce29f0f4c1e70465afc4.bindTooltip(
+                `<div>
+                     BIM Hay Hassani
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d5c690ff39db7c364c07f61429f9031f = L.marker(
+                [33.5612, -7.6789],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_f2ade2ecc1aeecd8aa9a3a35c75ff56f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6bdc07738da6811871bf025b24c13f1e = $(`<div id="html_6bdc07738da6811871bf025b24c13f1e" style="width: 100.0%; height: 100.0%;">BIM Sidi Bernoussi - Supérette / Mini-market</div>`)[0];
+                popup_f2ade2ecc1aeecd8aa9a3a35c75ff56f.setContent(html_6bdc07738da6811871bf025b24c13f1e);
+            
+        
+
+        marker_d5c690ff39db7c364c07f61429f9031f.bindPopup(popup_f2ade2ecc1aeecd8aa9a3a35c75ff56f)
+        ;
+
+        
+    
+    
+            marker_d5c690ff39db7c364c07f61429f9031f.bindTooltip(
+                `<div>
+                     BIM Sidi Bernoussi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5d8b1d642f96a471c54847f1b71ca641 = L.marker(
+                [33.5831, -7.608],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_fd2aaad8646a03336dde73c477cc4c10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_495f050aa48ccf0633d95714c47b9bca = $(`<div id="html_495f050aa48ccf0633d95714c47b9bca" style="width: 100.0%; height: 100.0%;">McDonald's Mers Sultan - Restaurant</div>`)[0];
+                popup_fd2aaad8646a03336dde73c477cc4c10.setContent(html_495f050aa48ccf0633d95714c47b9bca);
+            
+        
+
+        marker_5d8b1d642f96a471c54847f1b71ca641.bindPopup(popup_fd2aaad8646a03336dde73c477cc4c10)
+        ;
+
+        
+    
+    
+            marker_5d8b1d642f96a471c54847f1b71ca641.bindTooltip(
+                `<div>
+                     McDonald's Mers Sultan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f22a1897261c7d377560867224b926d5 = L.marker(
+                [33.5971, -7.6294],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_626d9ac70481bf25a19b17782ebc6476 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe297455b7bbbf3452d2b5f337d98c9a = $(`<div id="html_fe297455b7bbbf3452d2b5f337d98c9a" style="width: 100.0%; height: 100.0%;">McDonald's Sour Jdid - Restaurant</div>`)[0];
+                popup_626d9ac70481bf25a19b17782ebc6476.setContent(html_fe297455b7bbbf3452d2b5f337d98c9a);
+            
+        
+
+        marker_f22a1897261c7d377560867224b926d5.bindPopup(popup_626d9ac70481bf25a19b17782ebc6476)
+        ;
+
+        
+    
+    
+            marker_f22a1897261c7d377560867224b926d5.bindTooltip(
+                `<div>
+                     McDonald's Sour Jdid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2541ced2f2ad6df364332d682c4d11bf = L.marker(
+                [33.5802, -7.6409],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_3a757be72a5bbf3344244980bef81b71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2b2906d29046bbbdb7414b35bd834e5 = $(`<div id="html_b2b2906d29046bbbdb7414b35bd834e5" style="width: 100.0%; height: 100.0%;">McDonald's Maarif - Restaurant</div>`)[0];
+                popup_3a757be72a5bbf3344244980bef81b71.setContent(html_b2b2906d29046bbbdb7414b35bd834e5);
+            
+        
+
+        marker_2541ced2f2ad6df364332d682c4d11bf.bindPopup(popup_3a757be72a5bbf3344244980bef81b71)
+        ;
+
+        
+    
+    
+            marker_2541ced2f2ad6df364332d682c4d11bf.bindTooltip(
+                `<div>
+                     McDonald's Maarif
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a6db8b39358039ac2b094c36bc4aff93 = L.marker(
+                [33.5738, -7.6446],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_5a0bb351076aa72ee1d7d11f75a9f88e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86edc0bb305fd4e615966b0d95664838 = $(`<div id="html_86edc0bb305fd4e615966b0d95664838" style="width: 100.0%; height: 100.0%;">KFC Berger - Restaurant</div>`)[0];
+                popup_5a0bb351076aa72ee1d7d11f75a9f88e.setContent(html_86edc0bb305fd4e615966b0d95664838);
+            
+        
+
+        marker_a6db8b39358039ac2b094c36bc4aff93.bindPopup(popup_5a0bb351076aa72ee1d7d11f75a9f88e)
+        ;
+
+        
+    
+    
+            marker_a6db8b39358039ac2b094c36bc4aff93.bindTooltip(
+                `<div>
+                     KFC Berger
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5edc295abffc98457a373d3ebe766ab2 = L.marker(
+                [33.5771, -7.6741],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_795ea0331f98f731e8bbea67427edfff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70941a32bd1823d5ac41208e6c050cb8 = $(`<div id="html_70941a32bd1823d5ac41208e6c050cb8" style="width: 100.0%; height: 100.0%;">KFC Ain Diab - Restaurant</div>`)[0];
+                popup_795ea0331f98f731e8bbea67427edfff.setContent(html_70941a32bd1823d5ac41208e6c050cb8);
+            
+        
+
+        marker_5edc295abffc98457a373d3ebe766ab2.bindPopup(popup_795ea0331f98f731e8bbea67427edfff)
+        ;
+
+        
+    
+    
+            marker_5edc295abffc98457a373d3ebe766ab2.bindTooltip(
+                `<div>
+                     KFC Ain Diab
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f519b78951b3f1237de3b0199f670090 = L.marker(
+                [33.573, -7.6198],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_6548e6965eef0d76c812b595de6eadb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04b4c1ef71361cfb3c744099f2bbe327 = $(`<div id="html_04b4c1ef71361cfb3c744099f2bbe327" style="width: 100.0%; height: 100.0%;">KFC Les Hôpitaux - Restaurant</div>`)[0];
+                popup_6548e6965eef0d76c812b595de6eadb6.setContent(html_04b4c1ef71361cfb3c744099f2bbe327);
+            
+        
+
+        marker_f519b78951b3f1237de3b0199f670090.bindPopup(popup_6548e6965eef0d76c812b595de6eadb6)
+        ;
+
+        
+    
+    
+            marker_f519b78951b3f1237de3b0199f670090.bindTooltip(
+                `<div>
+                     KFC Les Hôpitaux
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cd9d137b4e6bb5919b3aa3e94d613ae2 = L.marker(
+                [33.55309999999999, -7.6098],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_304459e69668a3170fc1bc366460e582 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f66b9331d11d7e8ec5789643d556fe9c = $(`<div id="html_f66b9331d11d7e8ec5789643d556fe9c" style="width: 100.0%; height: 100.0%;">Paul Casablanca Centre - Boulangerie</div>`)[0];
+                popup_304459e69668a3170fc1bc366460e582.setContent(html_f66b9331d11d7e8ec5789643d556fe9c);
+            
+        
+
+        marker_cd9d137b4e6bb5919b3aa3e94d613ae2.bindPopup(popup_304459e69668a3170fc1bc366460e582)
+        ;
+
+        
+    
+    
+            marker_cd9d137b4e6bb5919b3aa3e94d613ae2.bindTooltip(
+                `<div>
+                     Paul Casablanca Centre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_013604176445f7a02e87d7e368367a12 = L.marker(
+                [33.56309999999999, -7.6018],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_fe0c341b4c9cb33ed2df704abef48a41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf1a1d1f2b5f373789bfda2959de514b = $(`<div id="html_bf1a1d1f2b5f373789bfda2959de514b" style="width: 100.0%; height: 100.0%;">Brioche Dorée Casablanca Centre - Boulangerie</div>`)[0];
+                popup_fe0c341b4c9cb33ed2df704abef48a41.setContent(html_bf1a1d1f2b5f373789bfda2959de514b);
+            
+        
+
+        marker_013604176445f7a02e87d7e368367a12.bindPopup(popup_fe0c341b4c9cb33ed2df704abef48a41)
+        ;
+
+        
+    
+    
+            marker_013604176445f7a02e87d7e368367a12.bindTooltip(
+                `<div>
+                     Brioche Dorée Casablanca Centre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_58586d8e4baf7db02ec7ca21ab81c8fa = L.marker(
+                [33.5731, -7.5938],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_776350fdf2c4934fe29d85136cf8a925 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c44866efa8c2d9faa46fe53c86e5058e = $(`<div id="html_c44866efa8c2d9faa46fe53c86e5058e" style="width: 100.0%; height: 100.0%;">Domino's Pizza Casablanca Centre - Restaurant</div>`)[0];
+                popup_776350fdf2c4934fe29d85136cf8a925.setContent(html_c44866efa8c2d9faa46fe53c86e5058e);
+            
+        
+
+        marker_58586d8e4baf7db02ec7ca21ab81c8fa.bindPopup(popup_776350fdf2c4934fe29d85136cf8a925)
+        ;
+
+        
+    
+    
+            marker_58586d8e4baf7db02ec7ca21ab81c8fa.bindTooltip(
+                `<div>
+                     Domino's Pizza Casablanca Centre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9b5d65490b5b7538061ce45cf645c688 = L.marker(
+                [33.583099999999995, -7.5858],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_94da150b192f90d322ef24e0abfbd4a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd99968a5e6a82c0feb83aecabc24803 = $(`<div id="html_dd99968a5e6a82c0feb83aecabc24803" style="width: 100.0%; height: 100.0%;">Starbucks Casablanca Centre - Café</div>`)[0];
+                popup_94da150b192f90d322ef24e0abfbd4a8.setContent(html_dd99968a5e6a82c0feb83aecabc24803);
+            
+        
+
+        marker_9b5d65490b5b7538061ce45cf645c688.bindPopup(popup_94da150b192f90d322ef24e0abfbd4a8)
+        ;
+
+        
+    
+    
+            marker_9b5d65490b5b7538061ce45cf645c688.bindTooltip(
+                `<div>
+                     Starbucks Casablanca Centre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1c43617896b82cd8266da96350a0b942 = L.marker(
+                [33.59309999999999, -7.5778],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_a051c940dbbc30a1878dfdc19fff7d03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15ca2add8b21e556fecbf18d19c0e63b = $(`<div id="html_15ca2add8b21e556fecbf18d19c0e63b" style="width: 100.0%; height: 100.0%;">Subway Casablanca Centre - Restaurant</div>`)[0];
+                popup_a051c940dbbc30a1878dfdc19fff7d03.setContent(html_15ca2add8b21e556fecbf18d19c0e63b);
+            
+        
+
+        marker_1c43617896b82cd8266da96350a0b942.bindPopup(popup_a051c940dbbc30a1878dfdc19fff7d03)
+        ;
+
+        
+    
+    
+            marker_1c43617896b82cd8266da96350a0b942.bindTooltip(
+                `<div>
+                     Subway Casablanca Centre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f931878fc9ec677850b99eebc1b8c9b2 = L.marker(
+                [33.60309999999999, -7.5698],
+                {
+}
+            ).addTo(marker_cluster_9211df804adc10b2260fd4e6fa3a500b);
+        
+    
+        var popup_5b7a8f08d7f87165dd3dd7c3591afba1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3c415bbd05e049233e8080d6744e16c = $(`<div id="html_c3c415bbd05e049233e8080d6744e16c" style="width: 100.0%; height: 100.0%;">Pizza Hut Casablanca Centre - Restaurant</div>`)[0];
+                popup_5b7a8f08d7f87165dd3dd7c3591afba1.setContent(html_c3c415bbd05e049233e8080d6744e16c);
+            
+        
+
+        marker_f931878fc9ec677850b99eebc1b8c9b2.bindPopup(popup_5b7a8f08d7f87165dd3dd7c3591afba1)
+        ;
+
+        
+    
+    
+            marker_f931878fc9ec677850b99eebc1b8c9b2.bindTooltip(
+                `<div>
+                     Pizza Hut Casablanca Centre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            marker_cluster_9211df804adc10b2260fd4e6fa3a500b.addTo(map_2a8d50e273c1ee946b9d4dcacbad0244);
+        
+</script>
+</html>

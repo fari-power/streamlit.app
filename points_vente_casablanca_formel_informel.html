@@ -1,0 +1,5184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_af619e80845ec81d49fdcb61159625ff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    bottom: 50px; left: 50px; width: 200px; height: 120px; 
+                    background-color: white; border:2px solid grey; z-index:9999; 
+                    font-size:14px; padding: 10px">
+        <p><b>Légende</b></p>
+        <p><i class="fa fa-circle" style="color:blue"></i> Secteur Formel</p>
+        <p><i class="fa fa-circle" style="color:red"></i> Secteur Informel</p>
+        <p><i class="fa fa-circle" style="color:gray"></i> Non classifié</p>
+        </div>
+        
+    
+            <div class="folium-map" id="map_af619e80845ec81d49fdcb61159625ff" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_af619e80845ec81d49fdcb61159625ff = L.map(
+                "map_af619e80845ec81d49fdcb61159625ff",
+                {
+                    center: [33.5731, -7.5898],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0565e93b304c70ac81fd4156737c7b0e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0565e93b304c70ac81fd4156737c7b0e.addTo(map_af619e80845ec81d49fdcb61159625ff);
+        
+    
+            var marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_d37cdebc1e5974701aceed5f20437c45 = L.marker(
+                [33.5738188, -7.6446827],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_c77356cebc7fa035f9fdf07b15d97e48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4c2eb951c14ddb933db1ff9e40ce2f9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eaae948bd9fab354e1e3c9013ef995b9 = $(`<div id="html_eaae948bd9fab354e1e3c9013ef995b9" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_a4c2eb951c14ddb933db1ff9e40ce2f9.setContent(html_eaae948bd9fab354e1e3c9013ef995b9);
+            
+        
+
+        marker_d37cdebc1e5974701aceed5f20437c45.bindPopup(popup_a4c2eb951c14ddb933db1ff9e40ce2f9)
+        ;
+
+        
+    
+    
+            marker_d37cdebc1e5974701aceed5f20437c45.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d37cdebc1e5974701aceed5f20437c45.setIcon(icon_c77356cebc7fa035f9fdf07b15d97e48);
+            
+    
+            var marker_cc741e2313b011f9d18f3b8be88dab73 = L.marker(
+                [33.5771567, -7.6741813],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_31f2a458a7f117fcefd3412dfa04f4aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f8a7d5e8701649270cb3b05a4153df5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b409b44a66eb2026f3d82eccdafa1a05 = $(`<div id="html_b409b44a66eb2026f3d82eccdafa1a05" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Market                         </div>`)[0];
+                popup_6f8a7d5e8701649270cb3b05a4153df5.setContent(html_b409b44a66eb2026f3d82eccdafa1a05);
+            
+        
+
+        marker_cc741e2313b011f9d18f3b8be88dab73.bindPopup(popup_6f8a7d5e8701649270cb3b05a4153df5)
+        ;
+
+        
+    
+    
+            marker_cc741e2313b011f9d18f3b8be88dab73.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cc741e2313b011f9d18f3b8be88dab73.setIcon(icon_31f2a458a7f117fcefd3412dfa04f4aa);
+            
+    
+            var marker_18d980bd138ab39bd58619cf9679e926 = L.marker(
+                [33.5908121, -7.6462218],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_7504afaf47899bc003dec15cd946ddb4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_772dd03970314546f51e2b5946533353 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_421c82e6085c43f801734b1d89df21f5 = $(`<div id="html_421c82e6085c43f801734b1d89df21f5" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Gourmet</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Avenue Ahmed Charci شارع أحمد الشرسي                         </div>`)[0];
+                popup_772dd03970314546f51e2b5946533353.setContent(html_421c82e6085c43f801734b1d89df21f5);
+            
+        
+
+        marker_18d980bd138ab39bd58619cf9679e926.bindPopup(popup_772dd03970314546f51e2b5946533353)
+        ;
+
+        
+    
+    
+            marker_18d980bd138ab39bd58619cf9679e926.bindTooltip(
+                `<div>
+                     Carrefour Gourmet (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_18d980bd138ab39bd58619cf9679e926.setIcon(icon_7504afaf47899bc003dec15cd946ddb4);
+            
+    
+            var marker_d4ec8b7ee72a1174dd98fd32bc23272d = L.marker(
+                [33.5981369, -7.6644676],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_5600ea26468f671b325aa9c8a205f8c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58422e2e55cc880e4b69005e8ef3c102 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_defc679a7a37ab7c5ad1ca86c1be267b = $(`<div id="html_defc679a7a37ab7c5ad1ca86c1be267b" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard de la Corniche شارع الكورنيش                         </div>`)[0];
+                popup_58422e2e55cc880e4b69005e8ef3c102.setContent(html_defc679a7a37ab7c5ad1ca86c1be267b);
+            
+        
+
+        marker_d4ec8b7ee72a1174dd98fd32bc23272d.bindPopup(popup_58422e2e55cc880e4b69005e8ef3c102)
+        ;
+
+        
+    
+    
+            marker_d4ec8b7ee72a1174dd98fd32bc23272d.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4ec8b7ee72a1174dd98fd32bc23272d.setIcon(icon_5600ea26468f671b325aa9c8a205f8c7);
+            
+    
+            var marker_c0813f3faa51afbe4897ef74ad49802a = L.marker(
+                [33.5802189, -7.6409084],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_df333347d3f6f11fe384334290898647 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2cdc9c9acdf791ea2642337f94b5c981 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3712c8e280d164d185c74eb2a01742b = $(`<div id="html_a3712c8e280d164d185c74eb2a01742b" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Rue Al Fourate زنقة الفرات                         </div>`)[0];
+                popup_2cdc9c9acdf791ea2642337f94b5c981.setContent(html_a3712c8e280d164d185c74eb2a01742b);
+            
+        
+
+        marker_c0813f3faa51afbe4897ef74ad49802a.bindPopup(popup_2cdc9c9acdf791ea2642337f94b5c981)
+        ;
+
+        
+    
+    
+            marker_c0813f3faa51afbe4897ef74ad49802a.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c0813f3faa51afbe4897ef74ad49802a.setIcon(icon_df333347d3f6f11fe384334290898647);
+            
+    
+            var marker_961f2f196c2f5a751c7d53d306535524 = L.marker(
+                [33.5730326, -7.6198771],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_4677e2d076d5529813029586b9915d37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_321bb9332cee2b5260f976f1fdf2ec76 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3e4784318bcdff1227641c8bf45c723f = $(`<div id="html_3e4784318bcdff1227641c8bf45c723f" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Market                         </div>`)[0];
+                popup_321bb9332cee2b5260f976f1fdf2ec76.setContent(html_3e4784318bcdff1227641c8bf45c723f);
+            
+        
+
+        marker_961f2f196c2f5a751c7d53d306535524.bindPopup(popup_321bb9332cee2b5260f976f1fdf2ec76)
+        ;
+
+        
+    
+    
+            marker_961f2f196c2f5a751c7d53d306535524.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_961f2f196c2f5a751c7d53d306535524.setIcon(icon_4677e2d076d5529813029586b9915d37);
+            
+    
+            var marker_9a5b49aca2a0419fee284f24a7f4ba0a = L.marker(
+                [33.597148, -7.6294045],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_d2ef4938791ecd0b635f3728193003a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cf28ee3dcaa30aebd5d121c837dfb33 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_272a16fb1f6f7c6ae60f8ce9e371e04c = $(`<div id="html_272a16fb1f6f7c6ae60f8ce9e371e04c" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard Ziraoui شارع الزيراوي                         </div>`)[0];
+                popup_3cf28ee3dcaa30aebd5d121c837dfb33.setContent(html_272a16fb1f6f7c6ae60f8ce9e371e04c);
+            
+        
+
+        marker_9a5b49aca2a0419fee284f24a7f4ba0a.bindPopup(popup_3cf28ee3dcaa30aebd5d121c837dfb33)
+        ;
+
+        
+    
+    
+            marker_9a5b49aca2a0419fee284f24a7f4ba0a.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9a5b49aca2a0419fee284f24a7f4ba0a.setIcon(icon_d2ef4938791ecd0b635f3728193003a6);
+            
+    
+            var marker_7f13c6a4fdecd52accfd2743f33472a0 = L.marker(
+                [33.595159, -7.5913872],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_f339de36a3127b00cf8c86701d09b5cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b5e21efedc098da5ffee74838b3c22bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34a7c49a373b056d9919a8b49d5f7467 = $(`<div id="html_34a7c49a373b056d9919a8b49d5f7467" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour des Saveurs</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Carrefour des Saveurs                         </div>`)[0];
+                popup_b5e21efedc098da5ffee74838b3c22bf.setContent(html_34a7c49a373b056d9919a8b49d5f7467);
+            
+        
+
+        marker_7f13c6a4fdecd52accfd2743f33472a0.bindPopup(popup_b5e21efedc098da5ffee74838b3c22bf)
+        ;
+
+        
+    
+    
+            marker_7f13c6a4fdecd52accfd2743f33472a0.bindTooltip(
+                `<div>
+                     Carrefour des Saveurs (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7f13c6a4fdecd52accfd2743f33472a0.setIcon(icon_f339de36a3127b00cf8c86701d09b5cf);
+            
+    
+            var marker_d795f39c3a8efd3d58d1889ec3d48755 = L.marker(
+                [33.5844973, -7.6080134],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_b002281fb7cff02be539e3b3811e3c74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_489cb002845a994429ecbc538a9ed1c5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89b6a1798b414bee0c2b0b17127ffb2b = $(`<div id="html_89b6a1798b414bee0c2b0b17127ffb2b" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_489cb002845a994429ecbc538a9ed1c5.setContent(html_89b6a1798b414bee0c2b0b17127ffb2b);
+            
+        
+
+        marker_d795f39c3a8efd3d58d1889ec3d48755.bindPopup(popup_489cb002845a994429ecbc538a9ed1c5)
+        ;
+
+        
+    
+    
+            marker_d795f39c3a8efd3d58d1889ec3d48755.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d795f39c3a8efd3d58d1889ec3d48755.setIcon(icon_b002281fb7cff02be539e3b3811e3c74);
+            
+    
+            var marker_6b9bfce9b19799ede3cb64e9f466feea = L.marker(
+                [33.5739187, -7.6445744],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_2f3031d10a1cc8652b653fa68e408939 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f11a79f3bdb674d397fb7b837bd19f8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c75aeffd855956cb40e3f26e7b24457f = $(`<div id="html_c75aeffd855956cb40e3f26e7b24457f" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_0f11a79f3bdb674d397fb7b837bd19f8.setContent(html_c75aeffd855956cb40e3f26e7b24457f);
+            
+        
+
+        marker_6b9bfce9b19799ede3cb64e9f466feea.bindPopup(popup_0f11a79f3bdb674d397fb7b837bd19f8)
+        ;
+
+        
+    
+    
+            marker_6b9bfce9b19799ede3cb64e9f466feea.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b9bfce9b19799ede3cb64e9f466feea.setIcon(icon_2f3031d10a1cc8652b653fa68e408939);
+            
+    
+            var marker_c082f0c369da8e84a517c7cbad33a7d9 = L.marker(
+                [33.5841408, -7.599484],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_b30e132a723cf41ab8705c4a6dc76967 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d92babd4ab7a6d41a40c62141739babc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb630742fad1f9b3a4f633075074a0fc = $(`<div id="html_cb630742fad1f9b3a4f633075074a0fc" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard de la Gironde                         </div>`)[0];
+                popup_d92babd4ab7a6d41a40c62141739babc.setContent(html_cb630742fad1f9b3a4f633075074a0fc);
+            
+        
+
+        marker_c082f0c369da8e84a517c7cbad33a7d9.bindPopup(popup_d92babd4ab7a6d41a40c62141739babc)
+        ;
+
+        
+    
+    
+            marker_c082f0c369da8e84a517c7cbad33a7d9.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c082f0c369da8e84a517c7cbad33a7d9.setIcon(icon_b30e132a723cf41ab8705c4a6dc76967);
+            
+    
+            var marker_f1c59b49aa88f117601b944e053300e2 = L.marker(
+                [33.5926838, -7.6011795],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_725de87f76810ddd994223c87dffb3bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e31f17c1718f67362798a5e7951fc42c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_319cba4c4f319482778b713636aa6012 = $(`<div id="html_319cba4c4f319482778b713636aa6012" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Market                         </div>`)[0];
+                popup_e31f17c1718f67362798a5e7951fc42c.setContent(html_319cba4c4f319482778b713636aa6012);
+            
+        
+
+        marker_f1c59b49aa88f117601b944e053300e2.bindPopup(popup_e31f17c1718f67362798a5e7951fc42c)
+        ;
+
+        
+    
+    
+            marker_f1c59b49aa88f117601b944e053300e2.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1c59b49aa88f117601b944e053300e2.setIcon(icon_725de87f76810ddd994223c87dffb3bf);
+            
+    
+            var marker_ded7f3c063b75bc264492b6226da825b = L.marker(
+                [33.5740376, -7.6361871],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_a58855491d384dee707105c20a88be7a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc9879d51d3928fceec622e1e08eb7a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b574be522e4692670eea525992e6e0ea = $(`<div id="html_b574be522e4692670eea525992e6e0ea" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Rue Henri Murger                         </div>`)[0];
+                popup_fc9879d51d3928fceec622e1e08eb7a9.setContent(html_b574be522e4692670eea525992e6e0ea);
+            
+        
+
+        marker_ded7f3c063b75bc264492b6226da825b.bindPopup(popup_fc9879d51d3928fceec622e1e08eb7a9)
+        ;
+
+        
+    
+    
+            marker_ded7f3c063b75bc264492b6226da825b.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ded7f3c063b75bc264492b6226da825b.setIcon(icon_a58855491d384dee707105c20a88be7a);
+            
+    
+            var marker_995e9be5bfee96b12213df364507a258 = L.marker(
+                [33.5382022, -7.6435543],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_e3a988eb5932427c8a9e920094220ce4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed971389708c1e28e71e1b158072b7a4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a4ee38d54ebc281cb8647924f847c0f = $(`<div id="html_7a4ee38d54ebc281cb8647924f847c0f" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Market                         </div>`)[0];
+                popup_ed971389708c1e28e71e1b158072b7a4.setContent(html_7a4ee38d54ebc281cb8647924f847c0f);
+            
+        
+
+        marker_995e9be5bfee96b12213df364507a258.bindPopup(popup_ed971389708c1e28e71e1b158072b7a4)
+        ;
+
+        
+    
+    
+            marker_995e9be5bfee96b12213df364507a258.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_995e9be5bfee96b12213df364507a258.setIcon(icon_e3a988eb5932427c8a9e920094220ce4);
+            
+    
+            var marker_7c8787ca0cd140d42cb48a092a3ecff0 = L.marker(
+                [33.5380366, -7.6432946],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_47087d6e488c3abf33ad0b2cd1b5d1da = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a21f0fb0cd2ff956893c5cad989a235a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b6abc56b4a22e29f4052fff5ca41a6b = $(`<div id="html_1b6abc56b4a22e29f4052fff5ca41a6b" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Market                         </div>`)[0];
+                popup_a21f0fb0cd2ff956893c5cad989a235a.setContent(html_1b6abc56b4a22e29f4052fff5ca41a6b);
+            
+        
+
+        marker_7c8787ca0cd140d42cb48a092a3ecff0.bindPopup(popup_a21f0fb0cd2ff956893c5cad989a235a)
+        ;
+
+        
+    
+    
+            marker_7c8787ca0cd140d42cb48a092a3ecff0.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c8787ca0cd140d42cb48a092a3ecff0.setIcon(icon_47087d6e488c3abf33ad0b2cd1b5d1da);
+            
+    
+            var marker_84dd3048c5b6b36dce983c0048ec75d1 = L.marker(
+                [33.5173168, -7.7990506],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_c2cf7f140a52428d478cf3fe0374ab52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d133c32b36174f8221dd644365309716 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bbc0cbac5939389c81de016bb00fafdd = $(`<div id="html_bbc0cbac5939389c81de016bb00fafdd" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_d133c32b36174f8221dd644365309716.setContent(html_bbc0cbac5939389c81de016bb00fafdd);
+            
+        
+
+        marker_84dd3048c5b6b36dce983c0048ec75d1.bindPopup(popup_d133c32b36174f8221dd644365309716)
+        ;
+
+        
+    
+    
+            marker_84dd3048c5b6b36dce983c0048ec75d1.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84dd3048c5b6b36dce983c0048ec75d1.setIcon(icon_c2cf7f140a52428d478cf3fe0374ab52);
+            
+    
+            var marker_0c21b904df714024ab95b4ba75302b7f = L.marker(
+                [33.5176502, -7.7999632],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_f5f4591487610d172ac30abb9640bee8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49315b3fd2f09189bd903117f257f018 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f97643eadfc4493e42810d9e7a1cfea4 = $(`<div id="html_f97643eadfc4493e42810d9e7a1cfea4" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Dar Bouzza</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Dar Bouzza                         </div>`)[0];
+                popup_49315b3fd2f09189bd903117f257f018.setContent(html_f97643eadfc4493e42810d9e7a1cfea4);
+            
+        
+
+        marker_0c21b904df714024ab95b4ba75302b7f.bindPopup(popup_49315b3fd2f09189bd903117f257f018)
+        ;
+
+        
+    
+    
+            marker_0c21b904df714024ab95b4ba75302b7f.bindTooltip(
+                `<div>
+                     Carrefour Dar Bouzza (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0c21b904df714024ab95b4ba75302b7f.setIcon(icon_f5f4591487610d172ac30abb9640bee8);
+            
+    
+            var marker_b3f3fe0e45d5c4245df160051aa1e78a = L.marker(
+                [33.607527, -7.5368732],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_729e37b1d7180865fbfbc4d6d7c0cf35 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_106a184a87116c38b96789b64860c7f7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_84975eb95af7ccb93898957befdb35e9 = $(`<div id="html_84975eb95af7ccb93898957befdb35e9" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_106a184a87116c38b96789b64860c7f7.setContent(html_84975eb95af7ccb93898957befdb35e9);
+            
+        
+
+        marker_b3f3fe0e45d5c4245df160051aa1e78a.bindPopup(popup_106a184a87116c38b96789b64860c7f7)
+        ;
+
+        
+    
+    
+            marker_b3f3fe0e45d5c4245df160051aa1e78a.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3f3fe0e45d5c4245df160051aa1e78a.setIcon(icon_729e37b1d7180865fbfbc4d6d7c0cf35);
+            
+    
+            var marker_8c1f6922cc349d602f560552a3591747 = L.marker(
+                [33.6021269, -7.5265618],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_95d182f6cdd035351f4052683e3b6591 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47d7660ba26e7a692ddc8ef7d9433558 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_45056b5847d26853d346f283b38bcc88 = $(`<div id="html_45056b5847d26853d346f283b38bcc88" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Market                         </div>`)[0];
+                popup_47d7660ba26e7a692ddc8ef7d9433558.setContent(html_45056b5847d26853d346f283b38bcc88);
+            
+        
+
+        marker_8c1f6922cc349d602f560552a3591747.bindPopup(popup_47d7660ba26e7a692ddc8ef7d9433558)
+        ;
+
+        
+    
+    
+            marker_8c1f6922cc349d602f560552a3591747.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8c1f6922cc349d602f560552a3591747.setIcon(icon_95d182f6cdd035351f4052683e3b6591);
+            
+    
+            var marker_494083ec47ffeca8f76ed9765c9b63cd = L.marker(
+                [33.5897236, -7.6297373],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_88669846dfac3d3fe5786e1d842574ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1fe3dcf1e78371e17c20ae1414c7ff36 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9168e50017ed190b206ae97c41570190 = $(`<div id="html_9168e50017ed190b206ae97c41570190" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Rue Taha Houcine زنقة طه حسين                         </div>`)[0];
+                popup_1fe3dcf1e78371e17c20ae1414c7ff36.setContent(html_9168e50017ed190b206ae97c41570190);
+            
+        
+
+        marker_494083ec47ffeca8f76ed9765c9b63cd.bindPopup(popup_1fe3dcf1e78371e17c20ae1414c7ff36)
+        ;
+
+        
+    
+    
+            marker_494083ec47ffeca8f76ed9765c9b63cd.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_494083ec47ffeca8f76ed9765c9b63cd.setIcon(icon_88669846dfac3d3fe5786e1d842574ed);
+            
+    
+            var marker_f79735428c91b1f4c181d2ce1d779e5e = L.marker(
+                [33.5987457, -7.5751282],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_426636b8f88ec207d7c2209c4fc2c396 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f40b8faa1c63b07375213b23673a206 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb91425959dfd9423c27f0dc4baf80cf = $(`<div id="html_cb91425959dfd9423c27f0dc4baf80cf" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_6f40b8faa1c63b07375213b23673a206.setContent(html_cb91425959dfd9423c27f0dc4baf80cf);
+            
+        
+
+        marker_f79735428c91b1f4c181d2ce1d779e5e.bindPopup(popup_6f40b8faa1c63b07375213b23673a206)
+        ;
+
+        
+    
+    
+            marker_f79735428c91b1f4c181d2ce1d779e5e.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f79735428c91b1f4c181d2ce1d779e5e.setIcon(icon_426636b8f88ec207d7c2209c4fc2c396);
+            
+    
+            var marker_09e02211874b98abc79c63d92c9b536f = L.marker(
+                [33.5379265, -7.680443],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_824bde40ba0a566b50d4a43726c83df9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f854aecd0301644eb047d181601f20e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_322c1d7cd2158a5404052402dd69e788 = $(`<div id="html_322c1d7cd2158a5404052402dd69e788" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Market                         </div>`)[0];
+                popup_4f854aecd0301644eb047d181601f20e.setContent(html_322c1d7cd2158a5404052402dd69e788);
+            
+        
+
+        marker_09e02211874b98abc79c63d92c9b536f.bindPopup(popup_4f854aecd0301644eb047d181601f20e)
+        ;
+
+        
+    
+    
+            marker_09e02211874b98abc79c63d92c9b536f.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09e02211874b98abc79c63d92c9b536f.setIcon(icon_824bde40ba0a566b50d4a43726c83df9);
+            
+    
+            var marker_cdf3bbd69fd4303cb85ec3676e871c7d = L.marker(
+                [33.5737578, -7.6446216],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_0426a5a02f9d934d14931d9adc19eb4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75bc0f843335814f4cf731f6253ed1ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e58e3ed50549ac0e84893ef2a883672 = $(`<div id="html_0e58e3ed50549ac0e84893ef2a883672" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_75bc0f843335814f4cf731f6253ed1ab.setContent(html_0e58e3ed50549ac0e84893ef2a883672);
+            
+        
+
+        marker_cdf3bbd69fd4303cb85ec3676e871c7d.bindPopup(popup_75bc0f843335814f4cf731f6253ed1ab)
+        ;
+
+        
+    
+    
+            marker_cdf3bbd69fd4303cb85ec3676e871c7d.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cdf3bbd69fd4303cb85ec3676e871c7d.setIcon(icon_0426a5a02f9d934d14931d9adc19eb4a);
+            
+    
+            var marker_b5f2a6542d36854c1c92e8c457569622 = L.marker(
+                [33.531131, -7.6226294],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_9c9cc18f051b4bb9b528abae327ceda5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3edaff6cd5871cbc9a9cfc712a398f80 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8e67dc85dccef96449c93eacdd11b380 = $(`<div id="html_8e67dc85dccef96449c93eacdd11b380" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour Market                         </div>`)[0];
+                popup_3edaff6cd5871cbc9a9cfc712a398f80.setContent(html_8e67dc85dccef96449c93eacdd11b380);
+            
+        
+
+        marker_b5f2a6542d36854c1c92e8c457569622.bindPopup(popup_3edaff6cd5871cbc9a9cfc712a398f80)
+        ;
+
+        
+    
+    
+            marker_b5f2a6542d36854c1c92e8c457569622.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5f2a6542d36854c1c92e8c457569622.setIcon(icon_9c9cc18f051b4bb9b528abae327ceda5);
+            
+    
+            var marker_359e468c5d509e2789de5630ee22d269 = L.marker(
+                [33.5911972, -7.6388189],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_fddda11ee5efb6b594908fe10dae2933 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_880e304bb8c74e7312042b7e688a4924 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34d4104894be958f44c933324e452d6a = $(`<div id="html_34d4104894be958f44c933324e452d6a" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Express</b><br>                         Catégorie: Supérette / Mini-market<br>                         Statut: Formel<br>                         Adresse: Rue Ahmed El Mokri زنقة أحمد المقري                         </div>`)[0];
+                popup_880e304bb8c74e7312042b7e688a4924.setContent(html_34d4104894be958f44c933324e452d6a);
+            
+        
+
+        marker_359e468c5d509e2789de5630ee22d269.bindPopup(popup_880e304bb8c74e7312042b7e688a4924)
+        ;
+
+        
+    
+    
+            marker_359e468c5d509e2789de5630ee22d269.bindTooltip(
+                `<div>
+                     Carrefour Express (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_359e468c5d509e2789de5630ee22d269.setIcon(icon_fddda11ee5efb6b594908fe10dae2933);
+            
+    
+            var marker_e0f4dc530ac085497b2027caaf9d134b = L.marker(
+                [33.5667786, -7.6514343],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_e14e9d75595a764d49503c4b9821a3c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50e81a0bd530112947ca0d3b4015b113 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2139a4504f9fc779b9e0b3f6ff5b3a65 = $(`<div id="html_2139a4504f9fc779b9e0b3f6ff5b3a65" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Rue Al Banafsaj زنقة البنفسج                         </div>`)[0];
+                popup_50e81a0bd530112947ca0d3b4015b113.setContent(html_2139a4504f9fc779b9e0b3f6ff5b3a65);
+            
+        
+
+        marker_e0f4dc530ac085497b2027caaf9d134b.bindPopup(popup_50e81a0bd530112947ca0d3b4015b113)
+        ;
+
+        
+    
+    
+            marker_e0f4dc530ac085497b2027caaf9d134b.bindTooltip(
+                `<div>
+                     Carrefour Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e0f4dc530ac085497b2027caaf9d134b.setIcon(icon_e14e9d75595a764d49503c4b9821a3c6);
+            
+    
+            var marker_42b9a8fc3b116bebbdf64df096442915 = L.marker(
+                [33.5354196, -7.6419162],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_9c6e2f7d5df3baecbe3001be266e126f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6bd413628db369700ddc70ecf929deb2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_25452c15c8f99fa10d6bb421a847b25d = $(`<div id="html_25452c15c8f99fa10d6bb421a847b25d" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_6bd413628db369700ddc70ecf929deb2.setContent(html_25452c15c8f99fa10d6bb421a847b25d);
+            
+        
+
+        marker_42b9a8fc3b116bebbdf64df096442915.bindPopup(popup_6bd413628db369700ddc70ecf929deb2)
+        ;
+
+        
+    
+    
+            marker_42b9a8fc3b116bebbdf64df096442915.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_42b9a8fc3b116bebbdf64df096442915.setIcon(icon_9c6e2f7d5df3baecbe3001be266e126f);
+            
+    
+            var marker_76d0a3ce65b7fbb8bf527c9b03f29c77 = L.marker(
+                [33.5375122, -7.6636622],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_b8de838e5d1b788a9dd36a220ab98324 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_950e5fe3336e09dda03212f342441227 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_376e1f780e889d063dd8e0196acd60e7 = $(`<div id="html_376e1f780e889d063dd8e0196acd60e7" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour d'Azbane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour d'Azbane                         </div>`)[0];
+                popup_950e5fe3336e09dda03212f342441227.setContent(html_376e1f780e889d063dd8e0196acd60e7);
+            
+        
+
+        marker_76d0a3ce65b7fbb8bf527c9b03f29c77.bindPopup(popup_950e5fe3336e09dda03212f342441227)
+        ;
+
+        
+    
+    
+            marker_76d0a3ce65b7fbb8bf527c9b03f29c77.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_76d0a3ce65b7fbb8bf527c9b03f29c77.setIcon(icon_b8de838e5d1b788a9dd36a220ab98324);
+            
+    
+            var marker_06d174c73181256538fdfd147d72c584 = L.marker(
+                [33.5378775, -7.6630145],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_000e15859ebc436545e2d2aa2845c487 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d478a89aef96f38877d996022da45003 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19c4fd6adc4bc9beba9f8360fe4d398a = $(`<div id="html_19c4fd6adc4bc9beba9f8360fe4d398a" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour d'Azbane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour d'Azbane                         </div>`)[0];
+                popup_d478a89aef96f38877d996022da45003.setContent(html_19c4fd6adc4bc9beba9f8360fe4d398a);
+            
+        
+
+        marker_06d174c73181256538fdfd147d72c584.bindPopup(popup_d478a89aef96f38877d996022da45003)
+        ;
+
+        
+    
+    
+            marker_06d174c73181256538fdfd147d72c584.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_06d174c73181256538fdfd147d72c584.setIcon(icon_000e15859ebc436545e2d2aa2845c487);
+            
+    
+            var marker_eedfe9f8108480c90caf9d214fc007d2 = L.marker(
+                [33.5376046, -7.6637789],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_666c9f7cd0ebbc2f5a10b0e728b785d5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b5cf2abfc1e68717e0e60892b7e821d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_116803eda1e17e7e71d90c5b62174dc7 = $(`<div id="html_116803eda1e17e7e71d90c5b62174dc7" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour d'Azbane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour d'Azbane                         </div>`)[0];
+                popup_b5cf2abfc1e68717e0e60892b7e821d8.setContent(html_116803eda1e17e7e71d90c5b62174dc7);
+            
+        
+
+        marker_eedfe9f8108480c90caf9d214fc007d2.bindPopup(popup_b5cf2abfc1e68717e0e60892b7e821d8)
+        ;
+
+        
+    
+    
+            marker_eedfe9f8108480c90caf9d214fc007d2.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eedfe9f8108480c90caf9d214fc007d2.setIcon(icon_666c9f7cd0ebbc2f5a10b0e728b785d5);
+            
+    
+            var marker_7553d83d233cf302be7ac08b6f54d9bb = L.marker(
+                [33.5383281, -7.6624972],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_9ca9c24387c5d3d79aa104da15fa4927 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da231549f5e0ef57ab71ad9de57d878e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b3943fb7a9aa0a1902a2a3b8feb20e7c = $(`<div id="html_b3943fb7a9aa0a1902a2a3b8feb20e7c" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour d'Azbane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour d'Azbane                         </div>`)[0];
+                popup_da231549f5e0ef57ab71ad9de57d878e.setContent(html_b3943fb7a9aa0a1902a2a3b8feb20e7c);
+            
+        
+
+        marker_7553d83d233cf302be7ac08b6f54d9bb.bindPopup(popup_da231549f5e0ef57ab71ad9de57d878e)
+        ;
+
+        
+    
+    
+            marker_7553d83d233cf302be7ac08b6f54d9bb.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7553d83d233cf302be7ac08b6f54d9bb.setIcon(icon_9ca9c24387c5d3d79aa104da15fa4927);
+            
+    
+            var marker_69aee2365b207c16d85f16b13679fd11 = L.marker(
+                [33.5380952, -7.6632303],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_c68c478b7f9a9d751df0b119e984f543 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06fec561300495da74485c7507cab0a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_adbd38c2c5a3c34e61db70d4ff4656db = $(`<div id="html_adbd38c2c5a3c34e61db70d4ff4656db" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour d'Azbane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour d'Azbane                         </div>`)[0];
+                popup_06fec561300495da74485c7507cab0a9.setContent(html_adbd38c2c5a3c34e61db70d4ff4656db);
+            
+        
+
+        marker_69aee2365b207c16d85f16b13679fd11.bindPopup(popup_06fec561300495da74485c7507cab0a9)
+        ;
+
+        
+    
+    
+            marker_69aee2365b207c16d85f16b13679fd11.bindTooltip(
+                `<div>
+                     Carrefour d'Azbane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_69aee2365b207c16d85f16b13679fd11.setIcon(icon_c68c478b7f9a9d751df0b119e984f543);
+            
+    
+            var marker_2669bf6e32c7267b75676ebf6a773733 = L.marker(
+                [33.5290416, -7.5930685],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_7f93373049626cb915ef5344098af423 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2020b1252409fffe5b2ae8c7b4676e2a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_225f4447cbae23bec3201613bd01e60e = $(`<div id="html_225f4447cbae23bec3201613bd01e60e" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Carrefour                         </div>`)[0];
+                popup_2020b1252409fffe5b2ae8c7b4676e2a.setContent(html_225f4447cbae23bec3201613bd01e60e);
+            
+        
+
+        marker_2669bf6e32c7267b75676ebf6a773733.bindPopup(popup_2020b1252409fffe5b2ae8c7b4676e2a)
+        ;
+
+        
+    
+    
+            marker_2669bf6e32c7267b75676ebf6a773733.bindTooltip(
+                `<div>
+                     Carrefour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2669bf6e32c7267b75676ebf6a773733.setIcon(icon_7f93373049626cb915ef5344098af423);
+            
+    
+            var marker_feda33eedc66bdb3bfe16552537b95b5 = L.marker(
+                [33.5618694, -7.5946468],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_25b58599260068df31e63bb23c7cb6e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8a17a30d8113146b2319793675268c56 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b8207e8dae1bed525646f7744f59293b = $(`<div id="html_b8207e8dae1bed525646f7744f59293b" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Drissia M6</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Drissia M6                         </div>`)[0];
+                popup_8a17a30d8113146b2319793675268c56.setContent(html_b8207e8dae1bed525646f7744f59293b);
+            
+        
+
+        marker_feda33eedc66bdb3bfe16552537b95b5.bindPopup(popup_8a17a30d8113146b2319793675268c56)
+        ;
+
+        
+    
+    
+            marker_feda33eedc66bdb3bfe16552537b95b5.bindTooltip(
+                `<div>
+                     Marjane Drissia M6 (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_feda33eedc66bdb3bfe16552537b95b5.setIcon(icon_25b58599260068df31e63bb23c7cb6e7);
+            
+    
+            var marker_d2dc8141bc02ef45a4df9fbbcba9d8c2 = L.marker(
+                [33.5446703, -7.639958],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_63992d9b524b535dd8772fc37346f07a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bad54a1e9a039aa9f5e417acafd031d3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e07a34394522bd5e73661cf80b2503c7 = $(`<div id="html_e07a34394522bd5e73661cf80b2503c7" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_bad54a1e9a039aa9f5e417acafd031d3.setContent(html_e07a34394522bd5e73661cf80b2503c7);
+            
+        
+
+        marker_d2dc8141bc02ef45a4df9fbbcba9d8c2.bindPopup(popup_bad54a1e9a039aa9f5e417acafd031d3)
+        ;
+
+        
+    
+    
+            marker_d2dc8141bc02ef45a4df9fbbcba9d8c2.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d2dc8141bc02ef45a4df9fbbcba9d8c2.setIcon(icon_63992d9b524b535dd8772fc37346f07a);
+            
+    
+            var marker_f1eb8ac2313a91f3889af5b1b3d213ed = L.marker(
+                [33.5958294, -7.5301296],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_28bf5d6e831335e056b9aa210bc33b0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d95d8752236db1a1f6c95c41e7a5a88f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_123daf0579e74e9390e7dc95d4cd9ded = $(`<div id="html_123daf0579e74e9390e7dc95d4cd9ded" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Aïn Sbaâ</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Aïn Sbaâ                         </div>`)[0];
+                popup_d95d8752236db1a1f6c95c41e7a5a88f.setContent(html_123daf0579e74e9390e7dc95d4cd9ded);
+            
+        
+
+        marker_f1eb8ac2313a91f3889af5b1b3d213ed.bindPopup(popup_d95d8752236db1a1f6c95c41e7a5a88f)
+        ;
+
+        
+    
+    
+            marker_f1eb8ac2313a91f3889af5b1b3d213ed.bindTooltip(
+                `<div>
+                     Marjane Aïn Sbaâ (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1eb8ac2313a91f3889af5b1b3d213ed.setIcon(icon_28bf5d6e831335e056b9aa210bc33b0e);
+            
+    
+            var marker_9fc737171436c074445e722aa35cb21d = L.marker(
+                [33.5746919, -7.7081046],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_731c7ab39c9a1137742ea7580cb20118 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2ef49100ad3ca2041948e93240dd8bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_12131c6b921d49aa3ddc11a3103c9d18 = $(`<div id="html_12131c6b921d49aa3ddc11a3103c9d18" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_a2ef49100ad3ca2041948e93240dd8bf.setContent(html_12131c6b921d49aa3ddc11a3103c9d18);
+            
+        
+
+        marker_9fc737171436c074445e722aa35cb21d.bindPopup(popup_a2ef49100ad3ca2041948e93240dd8bf)
+        ;
+
+        
+    
+    
+            marker_9fc737171436c074445e722aa35cb21d.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9fc737171436c074445e722aa35cb21d.setIcon(icon_731c7ab39c9a1137742ea7580cb20118);
+            
+    
+            var marker_2809e72bcaf79216014812219a28f778 = L.marker(
+                [33.594818, -7.6515874],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_f57532578a045a1e8e36df109f08397d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b76b0f6527c8fabeddef214e60364362 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aa66fab3c0e5637a0970e952221240a6 = $(`<div id="html_aa66fab3c0e5637a0970e952221240a6" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard de Bourgogne شارع بوركون                         </div>`)[0];
+                popup_b76b0f6527c8fabeddef214e60364362.setContent(html_aa66fab3c0e5637a0970e952221240a6);
+            
+        
+
+        marker_2809e72bcaf79216014812219a28f778.bindPopup(popup_b76b0f6527c8fabeddef214e60364362)
+        ;
+
+        
+    
+    
+            marker_2809e72bcaf79216014812219a28f778.bindTooltip(
+                `<div>
+                     Marjane Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2809e72bcaf79216014812219a28f778.setIcon(icon_f57532578a045a1e8e36df109f08397d);
+            
+    
+            var marker_ee677859fbb6311306d86efa3c50eb1d = L.marker(
+                [33.595682, -7.531687],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_353df96bc3307daca98e433dc19b5eee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8a044f3f933ded07b4d45a994d745dc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c7574484260ef74f8aef86328198b38f = $(`<div id="html_c7574484260ef74f8aef86328198b38f" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_f8a044f3f933ded07b4d45a994d745dc.setContent(html_c7574484260ef74f8aef86328198b38f);
+            
+        
+
+        marker_ee677859fbb6311306d86efa3c50eb1d.bindPopup(popup_f8a044f3f933ded07b4d45a994d745dc)
+        ;
+
+        
+    
+    
+            marker_ee677859fbb6311306d86efa3c50eb1d.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee677859fbb6311306d86efa3c50eb1d.setIcon(icon_353df96bc3307daca98e433dc19b5eee);
+            
+    
+            var marker_be47598a0c0a0f3577847be9aa009b5f = L.marker(
+                [33.5962524, -7.5321201],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_3d6b5e39415e46ac9b965637814febe7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5312fe57ee87de2826b018aa957d7a48 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_15c95037d2e8a3337686eb79e76ba4d4 = $(`<div id="html_15c95037d2e8a3337686eb79e76ba4d4" style="width: 100.0%; height: 100.0%;">                         <b>Pharmacie Marjane Ain Sebaa</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Centre Commercial Marjane Ain Sebaa                         </div>`)[0];
+                popup_5312fe57ee87de2826b018aa957d7a48.setContent(html_15c95037d2e8a3337686eb79e76ba4d4);
+            
+        
+
+        marker_be47598a0c0a0f3577847be9aa009b5f.bindPopup(popup_5312fe57ee87de2826b018aa957d7a48)
+        ;
+
+        
+    
+    
+            marker_be47598a0c0a0f3577847be9aa009b5f.bindTooltip(
+                `<div>
+                     Pharmacie Marjane Ain Sebaa (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be47598a0c0a0f3577847be9aa009b5f.setIcon(icon_3d6b5e39415e46ac9b965637814febe7);
+            
+    
+            var marker_b4f537031c3df64fd4987678a40c767c = L.marker(
+                [33.5743416, -7.65024],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_a52e517d9d12e7b489fc5d861eec2230 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_108b4136f52fbabd34629ddcdd08c260 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_968bf056b810f964024bad868e7e73a9 = $(`<div id="html_968bf056b810f964024bad868e7e73a9" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Market</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard Ghandi شارع غاندي                         </div>`)[0];
+                popup_108b4136f52fbabd34629ddcdd08c260.setContent(html_968bf056b810f964024bad868e7e73a9);
+            
+        
+
+        marker_b4f537031c3df64fd4987678a40c767c.bindPopup(popup_108b4136f52fbabd34629ddcdd08c260)
+        ;
+
+        
+    
+    
+            marker_b4f537031c3df64fd4987678a40c767c.bindTooltip(
+                `<div>
+                     Marjane Market (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b4f537031c3df64fd4987678a40c767c.setIcon(icon_a52e517d9d12e7b489fc5d861eec2230);
+            
+    
+            var marker_5a6db793c2b6297c808f9b596b814f4c = L.marker(
+                [33.5957237, -7.5302589],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_9e355a5e43b2b43ecbb67c9117a9bf94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b86292a80e39ad89506f9dce3ae98b92 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd3728d05ae3cd139ddbd3502efe42ca = $(`<div id="html_fd3728d05ae3cd139ddbd3502efe42ca" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Aïn Sbaâ</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Aïn Sbaâ                         </div>`)[0];
+                popup_b86292a80e39ad89506f9dce3ae98b92.setContent(html_fd3728d05ae3cd139ddbd3502efe42ca);
+            
+        
+
+        marker_5a6db793c2b6297c808f9b596b814f4c.bindPopup(popup_b86292a80e39ad89506f9dce3ae98b92)
+        ;
+
+        
+    
+    
+            marker_5a6db793c2b6297c808f9b596b814f4c.bindTooltip(
+                `<div>
+                     Marjane Aïn Sbaâ (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5a6db793c2b6297c808f9b596b814f4c.setIcon(icon_9e355a5e43b2b43ecbb67c9117a9bf94);
+            
+    
+            var marker_621321d8e5c09e2124388a87f21df9fb = L.marker(
+                [33.5627041, -7.5940106],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_177bb6a54f9e5681fb071da9c20b09f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd816aebedf4f1f2771f9aebc116c2a3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_989dab6d5de2a8ba45a5d69485c84a67 = $(`<div id="html_989dab6d5de2a8ba45a5d69485c84a67" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Drissia</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Drissia                         </div>`)[0];
+                popup_bd816aebedf4f1f2771f9aebc116c2a3.setContent(html_989dab6d5de2a8ba45a5d69485c84a67);
+            
+        
+
+        marker_621321d8e5c09e2124388a87f21df9fb.bindPopup(popup_bd816aebedf4f1f2771f9aebc116c2a3)
+        ;
+
+        
+    
+    
+            marker_621321d8e5c09e2124388a87f21df9fb.bindTooltip(
+                `<div>
+                     Marjane Drissia (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_621321d8e5c09e2124388a87f21df9fb.setIcon(icon_177bb6a54f9e5681fb071da9c20b09f8);
+            
+    
+            var marker_54ccf9d8f9d7eed504041be73f56631b = L.marker(
+                [33.5629532, -7.5939177],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_d7bedb8c12286f2c5c3ec37b276a7bfc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f2eb5e61ae3b53910eec2c85c900326 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_04e542f02a8157081cdf457343d27f73 = $(`<div id="html_04e542f02a8157081cdf457343d27f73" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Drissia</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Drissia                         </div>`)[0];
+                popup_6f2eb5e61ae3b53910eec2c85c900326.setContent(html_04e542f02a8157081cdf457343d27f73);
+            
+        
+
+        marker_54ccf9d8f9d7eed504041be73f56631b.bindPopup(popup_6f2eb5e61ae3b53910eec2c85c900326)
+        ;
+
+        
+    
+    
+            marker_54ccf9d8f9d7eed504041be73f56631b.bindTooltip(
+                `<div>
+                     Marjane Drissia (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54ccf9d8f9d7eed504041be73f56631b.setIcon(icon_d7bedb8c12286f2c5c3ec37b276a7bfc);
+            
+    
+            var marker_f7745a6503aec6ad2042560c41a636b3 = L.marker(
+                [33.561581, -7.5948997],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_e2a08921b5c6a4a24c26ee3d9d8857a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c61f60927d79cc726c1b2a1268996c5e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3ed63b5318ce5e80537c75aaf811cba3 = $(`<div id="html_3ed63b5318ce5e80537c75aaf811cba3" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Drissia M6</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Drissia M6                         </div>`)[0];
+                popup_c61f60927d79cc726c1b2a1268996c5e.setContent(html_3ed63b5318ce5e80537c75aaf811cba3);
+            
+        
+
+        marker_f7745a6503aec6ad2042560c41a636b3.bindPopup(popup_c61f60927d79cc726c1b2a1268996c5e)
+        ;
+
+        
+    
+    
+            marker_f7745a6503aec6ad2042560c41a636b3.bindTooltip(
+                `<div>
+                     Marjane Drissia M6 (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7745a6503aec6ad2042560c41a636b3.setIcon(icon_e2a08921b5c6a4a24c26ee3d9d8857a4);
+            
+    
+            var marker_9c8ebf60fee0218f26501e485e2d2641 = L.marker(
+                [33.5657963, -7.6765505],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_f8d3dcd11a30b97cc54722d62b75e617 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_264fe370090a9d9c4a57b51f621aa1c3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f3fb26db94e8cf3aa15400460a3aa98b = $(`<div id="html_f3fb26db94e8cf3aa15400460a3aa98b" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Hay Hassani</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Hay Hassani                         </div>`)[0];
+                popup_264fe370090a9d9c4a57b51f621aa1c3.setContent(html_f3fb26db94e8cf3aa15400460a3aa98b);
+            
+        
+
+        marker_9c8ebf60fee0218f26501e485e2d2641.bindPopup(popup_264fe370090a9d9c4a57b51f621aa1c3)
+        ;
+
+        
+    
+    
+            marker_9c8ebf60fee0218f26501e485e2d2641.bindTooltip(
+                `<div>
+                     Marjane Hay Hassani (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c8ebf60fee0218f26501e485e2d2641.setIcon(icon_f8d3dcd11a30b97cc54722d62b75e617);
+            
+    
+            var marker_03444cb33a630fcf37a31d78fc0d3790 = L.marker(
+                [33.5879069, -7.6125249],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_4c910edf69cdcce6d8206d2a78014465 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46877ec7a89f5e5902fab4ff3730ff91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f2b72d70679a48d5d7f89f12e0b6871a = $(`<div id="html_f2b72d70679a48d5d7f89f12e0b6871a" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard Rahal El Meskini                         </div>`)[0];
+                popup_46877ec7a89f5e5902fab4ff3730ff91.setContent(html_f2b72d70679a48d5d7f89f12e0b6871a);
+            
+        
+
+        marker_03444cb33a630fcf37a31d78fc0d3790.bindPopup(popup_46877ec7a89f5e5902fab4ff3730ff91)
+        ;
+
+        
+    
+    
+            marker_03444cb33a630fcf37a31d78fc0d3790.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_03444cb33a630fcf37a31d78fc0d3790.setIcon(icon_4c910edf69cdcce6d8206d2a78014465);
+            
+    
+            var marker_cd954a6f354250e909d6a0b00068ce2f = L.marker(
+                [33.59444, -7.6086746],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_d66f7bdce8ad5bd7398263630edef7f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e259bbeb36dd4fc8133f88efbb0b5c30 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_837942afdbb1a7b22ba2cefe3abdab8e = $(`<div id="html_837942afdbb1a7b22ba2cefe3abdab8e" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard Mohamed Smiha                         </div>`)[0];
+                popup_e259bbeb36dd4fc8133f88efbb0b5c30.setContent(html_837942afdbb1a7b22ba2cefe3abdab8e);
+            
+        
+
+        marker_cd954a6f354250e909d6a0b00068ce2f.bindPopup(popup_e259bbeb36dd4fc8133f88efbb0b5c30)
+        ;
+
+        
+    
+    
+            marker_cd954a6f354250e909d6a0b00068ce2f.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cd954a6f354250e909d6a0b00068ce2f.setIcon(icon_d66f7bdce8ad5bd7398263630edef7f8);
+            
+    
+            var marker_f97c5387693eac7460a9350ec656b4db = L.marker(
+                [33.5130223, -7.6593739],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_ffe2d43a0d2a6268e18ee9497834ca42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2eb82686344d65bf62ae1bbb94d36dd0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb2b80d60a99d63650ea9b8682a8dc8e = $(`<div id="html_cb2b80d60a99d63650ea9b8682a8dc8e" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_2eb82686344d65bf62ae1bbb94d36dd0.setContent(html_cb2b80d60a99d63650ea9b8682a8dc8e);
+            
+        
+
+        marker_f97c5387693eac7460a9350ec656b4db.bindPopup(popup_2eb82686344d65bf62ae1bbb94d36dd0)
+        ;
+
+        
+    
+    
+            marker_f97c5387693eac7460a9350ec656b4db.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f97c5387693eac7460a9350ec656b4db.setIcon(icon_ffe2d43a0d2a6268e18ee9497834ca42);
+            
+    
+            var marker_ca21978a394ec801a00b3dda6c4bdb6a = L.marker(
+                [33.5606342, -7.5934651],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_4247400430ab6988f904d1c4f5df7ddd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d6ed02f8430fe42b72f09ccd812fa5e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_082dd9a03b2d0115aa761b7e1cc51967 = $(`<div id="html_082dd9a03b2d0115aa761b7e1cc51967" style="width: 100.0%; height: 100.0%;">                         <b>interieur marjane drissia cote autoroute</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: interieur marjane drissia cote autoroute                         </div>`)[0];
+                popup_0d6ed02f8430fe42b72f09ccd812fa5e.setContent(html_082dd9a03b2d0115aa761b7e1cc51967);
+            
+        
+
+        marker_ca21978a394ec801a00b3dda6c4bdb6a.bindPopup(popup_0d6ed02f8430fe42b72f09ccd812fa5e)
+        ;
+
+        
+    
+    
+            marker_ca21978a394ec801a00b3dda6c4bdb6a.bindTooltip(
+                `<div>
+                     interieur marjane drissia cote autoroute (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ca21978a394ec801a00b3dda6c4bdb6a.setIcon(icon_4247400430ab6988f904d1c4f5df7ddd);
+            
+    
+            var marker_e7b9f8fe9ee5ca25454896377b93975a = L.marker(
+                [33.5619618, -7.5922072],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_f1a150c17bea56a93f3675272e36cd6b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_66fe4e5fbb2669919d2c0dd3b1a029aa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_763c3ce5a93e8685595da02b62c285ff = $(`<div id="html_763c3ce5a93e8685595da02b62c285ff" style="width: 100.0%; height: 100.0%;">                         <b>Bd touria chaoui derriere marjane drissia devant residence fal anour</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Bd touria chaoui derriere marjane drissia devant residence fal anour                         </div>`)[0];
+                popup_66fe4e5fbb2669919d2c0dd3b1a029aa.setContent(html_763c3ce5a93e8685595da02b62c285ff);
+            
+        
+
+        marker_e7b9f8fe9ee5ca25454896377b93975a.bindPopup(popup_66fe4e5fbb2669919d2c0dd3b1a029aa)
+        ;
+
+        
+    
+    
+            marker_e7b9f8fe9ee5ca25454896377b93975a.bindTooltip(
+                `<div>
+                     Bd touria chaoui derriere marjane drissia devant residence fal anour (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e7b9f8fe9ee5ca25454896377b93975a.setIcon(icon_f1a150c17bea56a93f3675272e36cd6b);
+            
+    
+            var marker_7df5aa50e937d92df28c1c0bc3f6788d = L.marker(
+                [33.5627218, -7.5931433],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_338631dd0b694875c3b8a2e633cd01d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6de6e8ca8059b807917a2b790b109bc5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5b21cbabe32c11be531edf416361ad7b = $(`<div id="html_5b21cbabe32c11be531edf416361ad7b" style="width: 100.0%; height: 100.0%;">                         <b>Derriere marjane drissia enface centre العمل الاجتماعي النسوي</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Derriere marjane drissia enface centre العمل الاجتماعي النسوي                         </div>`)[0];
+                popup_6de6e8ca8059b807917a2b790b109bc5.setContent(html_5b21cbabe32c11be531edf416361ad7b);
+            
+        
+
+        marker_7df5aa50e937d92df28c1c0bc3f6788d.bindPopup(popup_6de6e8ca8059b807917a2b790b109bc5)
+        ;
+
+        
+    
+    
+            marker_7df5aa50e937d92df28c1c0bc3f6788d.bindTooltip(
+                `<div>
+                     Derriere marjane drissia enface centre العمل الاجتماعي النسوي (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7df5aa50e937d92df28c1c0bc3f6788d.setIcon(icon_338631dd0b694875c3b8a2e633cd01d6);
+            
+    
+            var marker_749d4ae4617c941f780eb3a1cbe733a6 = L.marker(
+                [33.5623217, -7.5927812],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_809d59dc1977d1f6319e3d65e5cc4d3b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2dbeef11aa994cf3d8f9594df6a7ed5d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9ac4d7ea4fff82715c71dbe2122add74 = $(`<div id="html_9ac4d7ea4fff82715c71dbe2122add74" style="width: 100.0%; height: 100.0%;">                         <b>Derriere marjane drissia a cite de porte de chargement</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Derriere marjane drissia a cite de porte de chargement                         </div>`)[0];
+                popup_2dbeef11aa994cf3d8f9594df6a7ed5d.setContent(html_9ac4d7ea4fff82715c71dbe2122add74);
+            
+        
+
+        marker_749d4ae4617c941f780eb3a1cbe733a6.bindPopup(popup_2dbeef11aa994cf3d8f9594df6a7ed5d)
+        ;
+
+        
+    
+    
+            marker_749d4ae4617c941f780eb3a1cbe733a6.bindTooltip(
+                `<div>
+                     Derriere marjane drissia a cite de porte de chargement (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_749d4ae4617c941f780eb3a1cbe733a6.setIcon(icon_809d59dc1977d1f6319e3d65e5cc4d3b);
+            
+    
+            var marker_f01b0652790c105385e496136263ff48 = L.marker(
+                [33.5610432, -7.5948465],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_b558c623c87daca45d7f9da1c1dad44e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b86975c8a5e70339074f1944a479dd67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2c04d3bddbd7c07bfaba2be5d7a42744 = $(`<div id="html_2c04d3bddbd7c07bfaba2be5d7a42744" style="width: 100.0%; height: 100.0%;">                         <b>Souk des bois Bd med vi enface electroplanete marjane drissia</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Souk des bois Bd med vi enface electroplanete marjane drissia                         </div>`)[0];
+                popup_b86975c8a5e70339074f1944a479dd67.setContent(html_2c04d3bddbd7c07bfaba2be5d7a42744);
+            
+        
+
+        marker_f01b0652790c105385e496136263ff48.bindPopup(popup_b86975c8a5e70339074f1944a479dd67)
+        ;
+
+        
+    
+    
+            marker_f01b0652790c105385e496136263ff48.bindTooltip(
+                `<div>
+                     Souk des bois Bd med vi enface electroplanete marjane drissia (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f01b0652790c105385e496136263ff48.setIcon(icon_b558c623c87daca45d7f9da1c1dad44e);
+            
+    
+            var marker_3f377aa906e6b32f359d13f0445e7522 = L.marker(
+                [33.5629341, -7.5912872],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_e5ee6488e68a621f5cf110db6bcdd909 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_800050b595a55d48ebd41202e53af6b2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f3359eeb47de69d82aba14231f9d00cc = $(`<div id="html_f3359eeb47de69d82aba14231f9d00cc" style="width: 100.0%; height: 100.0%;">                         <b>Rue 30 angle rue 28 hay drissia2 cote marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Rue 30 angle rue 28 hay drissia2 cote marjane                         </div>`)[0];
+                popup_800050b595a55d48ebd41202e53af6b2.setContent(html_f3359eeb47de69d82aba14231f9d00cc);
+            
+        
+
+        marker_3f377aa906e6b32f359d13f0445e7522.bindPopup(popup_800050b595a55d48ebd41202e53af6b2)
+        ;
+
+        
+    
+    
+            marker_3f377aa906e6b32f359d13f0445e7522.bindTooltip(
+                `<div>
+                     Rue 30 angle rue 28 hay drissia2 cote marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3f377aa906e6b32f359d13f0445e7522.setIcon(icon_e5ee6488e68a621f5cf110db6bcdd909);
+            
+    
+            var marker_6c4b83733761d2d39f15c162a169b93b = L.marker(
+                [33.5626011, -7.5945568],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_c9d5431c8d61a54cada1d44ed3a6a644 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d6cc420bb8ac4dd8216255943091940 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b8627a85b140c89c17bc1c325d7e0c7 = $(`<div id="html_9b8627a85b140c89c17bc1c325d7e0c7" style="width: 100.0%; height: 100.0%;">                         <b>Bd bouchaib doukali angle bd led 6 enface porte principale marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Bd bouchaib doukali angle bd led 6 enface porte principale marjane                         </div>`)[0];
+                popup_6d6cc420bb8ac4dd8216255943091940.setContent(html_9b8627a85b140c89c17bc1c325d7e0c7);
+            
+        
+
+        marker_6c4b83733761d2d39f15c162a169b93b.bindPopup(popup_6d6cc420bb8ac4dd8216255943091940)
+        ;
+
+        
+    
+    
+            marker_6c4b83733761d2d39f15c162a169b93b.bindTooltip(
+                `<div>
+                     Bd bouchaib doukali angle bd led 6 enface porte principale marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c4b83733761d2d39f15c162a169b93b.setIcon(icon_c9d5431c8d61a54cada1d44ed3a6a644);
+            
+    
+            var marker_89c2d2d3a5da65a87eff8a432c296af5 = L.marker(
+                [33.4753036, -7.6069947],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_2c28f0b86f395954ca432ccfd04ae2c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d031674130320f71ca558f26b51aaa79 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fa27528faf0c11b8ad83392643b333be = $(`<div id="html_fa27528faf0c11b8ad83392643b333be" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_d031674130320f71ca558f26b51aaa79.setContent(html_fa27528faf0c11b8ad83392643b333be);
+            
+        
+
+        marker_89c2d2d3a5da65a87eff8a432c296af5.bindPopup(popup_d031674130320f71ca558f26b51aaa79)
+        ;
+
+        
+    
+    
+            marker_89c2d2d3a5da65a87eff8a432c296af5.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_89c2d2d3a5da65a87eff8a432c296af5.setIcon(icon_2c28f0b86f395954ca432ccfd04ae2c8);
+            
+    
+            var marker_65790e991b50517bf458f24de282725a = L.marker(
+                [33.566764, -7.6559254],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_fe78ceb1cb0a1ba7ea8220ce18963a21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f937e4722a9b3db889687df9764caa65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ee138a48e9f083f3b92b58fa6c04d542 = $(`<div id="html_ee138a48e9f083f3b92b58fa6c04d542" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Market مرجان ماركت</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard Sidi Abderrahmane شارع سيدي عبد الرحمان                         </div>`)[0];
+                popup_f937e4722a9b3db889687df9764caa65.setContent(html_ee138a48e9f083f3b92b58fa6c04d542);
+            
+        
+
+        marker_65790e991b50517bf458f24de282725a.bindPopup(popup_f937e4722a9b3db889687df9764caa65)
+        ;
+
+        
+    
+    
+            marker_65790e991b50517bf458f24de282725a.bindTooltip(
+                `<div>
+                     Marjane Market مرجان ماركت (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_65790e991b50517bf458f24de282725a.setIcon(icon_fe78ceb1cb0a1ba7ea8220ce18963a21);
+            
+    
+            var marker_ad845497a32d4ff624758450c671cf35 = L.marker(
+                [33.5608884, -7.5615566],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_a4938442ef93a30d69b9e9b4a10068a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ceb89b3ebcef063e306f5754a8b522cb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_79d3817b9515ae3f8396249307ccdc3f = $(`<div id="html_79d3817b9515ae3f8396249307ccdc3f" style="width: 100.0%; height: 100.0%;">                         <b>Sidi Othmane - Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Sidi Othmane - Marjane                         </div>`)[0];
+                popup_ceb89b3ebcef063e306f5754a8b522cb.setContent(html_79d3817b9515ae3f8396249307ccdc3f);
+            
+        
+
+        marker_ad845497a32d4ff624758450c671cf35.bindPopup(popup_ceb89b3ebcef063e306f5754a8b522cb)
+        ;
+
+        
+    
+    
+            marker_ad845497a32d4ff624758450c671cf35.bindTooltip(
+                `<div>
+                     Sidi Othmane - Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad845497a32d4ff624758450c671cf35.setIcon(icon_a4938442ef93a30d69b9e9b4a10068a4);
+            
+    
+            var marker_f5f10de7ba53e83f2f9e98ad9bb017a7 = L.marker(
+                [33.5607332, -7.5614891],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_bbe7c5b7e9ebedee4d1b6c7d9714a3ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_030009e0d56acb9636b7f2ff4126c4f3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9903e0d8363054a0c318184f8efb9cfc = $(`<div id="html_9903e0d8363054a0c318184f8efb9cfc" style="width: 100.0%; height: 100.0%;">                         <b>Sidi Othmane - Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Sidi Othmane - Marjane                         </div>`)[0];
+                popup_030009e0d56acb9636b7f2ff4126c4f3.setContent(html_9903e0d8363054a0c318184f8efb9cfc);
+            
+        
+
+        marker_f5f10de7ba53e83f2f9e98ad9bb017a7.bindPopup(popup_030009e0d56acb9636b7f2ff4126c4f3)
+        ;
+
+        
+    
+    
+            marker_f5f10de7ba53e83f2f9e98ad9bb017a7.bindTooltip(
+                `<div>
+                     Sidi Othmane - Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f5f10de7ba53e83f2f9e98ad9bb017a7.setIcon(icon_bbe7c5b7e9ebedee4d1b6c7d9714a3ba);
+            
+    
+            var marker_5c267410071659fc1c0368340b3b5ef4 = L.marker(
+                [33.5859021, -7.5930568],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_7adc2d15eea0d384ac33d4cad80a2e66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38e081c9f2e8c17bdf1516709f44d81b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c9e1220dd2462fcbd387b8a5cb27ec6f = $(`<div id="html_c9e1220dd2462fcbd387b8a5cb27ec6f" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Boulevard Ibn Tachfine                         </div>`)[0];
+                popup_38e081c9f2e8c17bdf1516709f44d81b.setContent(html_c9e1220dd2462fcbd387b8a5cb27ec6f);
+            
+        
+
+        marker_5c267410071659fc1c0368340b3b5ef4.bindPopup(popup_38e081c9f2e8c17bdf1516709f44d81b)
+        ;
+
+        
+    
+    
+            marker_5c267410071659fc1c0368340b3b5ef4.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c267410071659fc1c0368340b3b5ef4.setIcon(icon_7adc2d15eea0d384ac33d4cad80a2e66);
+            
+    
+            var marker_f8c006671f9d12994c4aa49f0cfc82da = L.marker(
+                [33.5632914, -7.6637711],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_66d65fd7b767c26f2c1f69031f102fe5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4c637daa1a5db4108f67ca4456135ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7006e8972816929add67bbe000dda14f = $(`<div id="html_7006e8972816929add67bbe000dda14f" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_a4c637daa1a5db4108f67ca4456135ff.setContent(html_7006e8972816929add67bbe000dda14f);
+            
+        
+
+        marker_f8c006671f9d12994c4aa49f0cfc82da.bindPopup(popup_a4c637daa1a5db4108f67ca4456135ff)
+        ;
+
+        
+    
+    
+            marker_f8c006671f9d12994c4aa49f0cfc82da.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f8c006671f9d12994c4aa49f0cfc82da.setIcon(icon_66d65fd7b767c26f2c1f69031f102fe5);
+            
+    
+            var marker_b750f89b3c5880c9911c818252f1a934 = L.marker(
+                [33.544542, -7.6423514],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_18778a161af7ac9c28f0b4bcfed43f8f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ea63984dfaca7d4e5608d4db20bec53 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_32697e43f141a9e010d040a049078318 = $(`<div id="html_32697e43f141a9e010d040a049078318" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Californie</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Californie                         </div>`)[0];
+                popup_4ea63984dfaca7d4e5608d4db20bec53.setContent(html_32697e43f141a9e010d040a049078318);
+            
+        
+
+        marker_b750f89b3c5880c9911c818252f1a934.bindPopup(popup_4ea63984dfaca7d4e5608d4db20bec53)
+        ;
+
+        
+    
+    
+            marker_b750f89b3c5880c9911c818252f1a934.bindTooltip(
+                `<div>
+                     Marjane Californie (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b750f89b3c5880c9911c818252f1a934.setIcon(icon_18778a161af7ac9c28f0b4bcfed43f8f);
+            
+    
+            var marker_6f101943dc9065b785855646d8a9cf83 = L.marker(
+                [33.5446148, -7.6419546],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_e9671fce40620cf336e6f5d6226bb0db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0818036c6935d93ac1ef81b517d3be49 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1d2e68d70b26a685b7d0150c46bd5ecc = $(`<div id="html_1d2e68d70b26a685b7d0150c46bd5ecc" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Californie</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Californie                         </div>`)[0];
+                popup_0818036c6935d93ac1ef81b517d3be49.setContent(html_1d2e68d70b26a685b7d0150c46bd5ecc);
+            
+        
+
+        marker_6f101943dc9065b785855646d8a9cf83.bindPopup(popup_0818036c6935d93ac1ef81b517d3be49)
+        ;
+
+        
+    
+    
+            marker_6f101943dc9065b785855646d8a9cf83.bindTooltip(
+                `<div>
+                     Marjane Californie (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6f101943dc9065b785855646d8a9cf83.setIcon(icon_e9671fce40620cf336e6f5d6226bb0db);
+            
+    
+            var marker_b1e85d6fb173fe34dc73844ee1f9d45c = L.marker(
+                [33.58076, -7.6415292],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_858d12874bf8368a86cfb24e0ad40e92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_201b96e585dd9a59a36fb0395c17506d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bfaf3708811568febf95cce66b48fde7 = $(`<div id="html_bfaf3708811568febf95cce66b48fde7" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Rue Al Fourate زنقة الفرات                         </div>`)[0];
+                popup_201b96e585dd9a59a36fb0395c17506d.setContent(html_bfaf3708811568febf95cce66b48fde7);
+            
+        
+
+        marker_b1e85d6fb173fe34dc73844ee1f9d45c.bindPopup(popup_201b96e585dd9a59a36fb0395c17506d)
+        ;
+
+        
+    
+    
+            marker_b1e85d6fb173fe34dc73844ee1f9d45c.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b1e85d6fb173fe34dc73844ee1f9d45c.setIcon(icon_858d12874bf8368a86cfb24e0ad40e92);
+            
+    
+            var marker_6250cb176d51426771565c5b572d6f4c = L.marker(
+                [33.5785138, -7.6243943],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_d0778fdba3f2c8f7ffd878466aaa9ea7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e27cbdb5798fb8cbcb23441ec1430b2e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f05572bbb50915a1986df80ab8dd063 = $(`<div id="html_6f05572bbb50915a1986df80ab8dd063" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_e27cbdb5798fb8cbcb23441ec1430b2e.setContent(html_6f05572bbb50915a1986df80ab8dd063);
+            
+        
+
+        marker_6250cb176d51426771565c5b572d6f4c.bindPopup(popup_e27cbdb5798fb8cbcb23441ec1430b2e)
+        ;
+
+        
+    
+    
+            marker_6250cb176d51426771565c5b572d6f4c.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6250cb176d51426771565c5b572d6f4c.setIcon(icon_d0778fdba3f2c8f7ffd878466aaa9ea7);
+            
+    
+            var marker_d0b2700fe63bd82d573cf7bc29c77616 = L.marker(
+                [33.597159, -7.6626748],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_310aff442b07c0cad5ea6e363daf1f9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ff8b30973892e9b5989b3316bbd76af6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_362c371c20458a502524f1066c14377c = $(`<div id="html_362c371c20458a502524f1066c14377c" style="width: 100.0%; height: 100.0%;">                         <b>Rue Al Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Rue Al Marjane                         </div>`)[0];
+                popup_ff8b30973892e9b5989b3316bbd76af6.setContent(html_362c371c20458a502524f1066c14377c);
+            
+        
+
+        marker_d0b2700fe63bd82d573cf7bc29c77616.bindPopup(popup_ff8b30973892e9b5989b3316bbd76af6)
+        ;
+
+        
+    
+    
+            marker_d0b2700fe63bd82d573cf7bc29c77616.bindTooltip(
+                `<div>
+                     Rue Al Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0b2700fe63bd82d573cf7bc29c77616.setIcon(icon_310aff442b07c0cad5ea6e363daf1f9d);
+            
+    
+            var marker_3d7fb6fdf3c916bc9fd2e6ce341f34bc = L.marker(
+                [33.5616025, -7.5935293],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_4efe0d2f14b1638a04f23271f41846dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_76d37286252e1e31f48730e7fb474668 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2584d5aa3aea296dab21f92beebf89a0 = $(`<div id="html_2584d5aa3aea296dab21f92beebf89a0" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_76d37286252e1e31f48730e7fb474668.setContent(html_2584d5aa3aea296dab21f92beebf89a0);
+            
+        
+
+        marker_3d7fb6fdf3c916bc9fd2e6ce341f34bc.bindPopup(popup_76d37286252e1e31f48730e7fb474668)
+        ;
+
+        
+    
+    
+            marker_3d7fb6fdf3c916bc9fd2e6ce341f34bc.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d7fb6fdf3c916bc9fd2e6ce341f34bc.setIcon(icon_4efe0d2f14b1638a04f23271f41846dc);
+            
+    
+            var marker_55ce1cf28228c7952344d90ef29257f2 = L.marker(
+                [33.5602836, -7.5614755],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_feb8a99465f22094623053378779a2c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1a6a75cd3556531e2f93efcb765fdfa2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61d5a5e733351fb98abb4729fe5ef361 = $(`<div id="html_61d5a5e733351fb98abb4729fe5ef361" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_1a6a75cd3556531e2f93efcb765fdfa2.setContent(html_61d5a5e733351fb98abb4729fe5ef361);
+            
+        
+
+        marker_55ce1cf28228c7952344d90ef29257f2.bindPopup(popup_1a6a75cd3556531e2f93efcb765fdfa2)
+        ;
+
+        
+    
+    
+            marker_55ce1cf28228c7952344d90ef29257f2.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55ce1cf28228c7952344d90ef29257f2.setIcon(icon_feb8a99465f22094623053378779a2c4);
+            
+    
+            var marker_9d644c502012ff88775b1dcbde6647ad = L.marker(
+                [33.5459358, -7.5495858],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_4a88c86ed4884506d3236f039e0b817c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b707b72f34fb9633f492274e5119b774 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c6827fd31f3076c0680bc6447e06e961 = $(`<div id="html_c6827fd31f3076c0680bc6447e06e961" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Sidi Othmane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane Sidi Othmane                         </div>`)[0];
+                popup_b707b72f34fb9633f492274e5119b774.setContent(html_c6827fd31f3076c0680bc6447e06e961);
+            
+        
+
+        marker_9d644c502012ff88775b1dcbde6647ad.bindPopup(popup_b707b72f34fb9633f492274e5119b774)
+        ;
+
+        
+    
+    
+            marker_9d644c502012ff88775b1dcbde6647ad.bindTooltip(
+                `<div>
+                     Marjane Sidi Othmane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9d644c502012ff88775b1dcbde6647ad.setIcon(icon_4a88c86ed4884506d3236f039e0b817c);
+            
+    
+            var marker_4373fce4d88be3d63863eff3e367fafa = L.marker(
+                [33.5879624, -7.640294],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_d17f3b0f7b22c9b1bb5c7112d7edb88c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8a6c9c7b6b766377ff2258e615d7b752 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f30bca1a759aa83b8412d2459e2acca0 = $(`<div id="html_f30bca1a759aa83b8412d2459e2acca0" style="width: 100.0%; height: 100.0%;">                         <b>Résidence Marjane إقامة مرجان</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Rue Ibnou Yaala Al Ifrani زنقة إبن يلعى الإفراني                         </div>`)[0];
+                popup_8a6c9c7b6b766377ff2258e615d7b752.setContent(html_f30bca1a759aa83b8412d2459e2acca0);
+            
+        
+
+        marker_4373fce4d88be3d63863eff3e367fafa.bindPopup(popup_8a6c9c7b6b766377ff2258e615d7b752)
+        ;
+
+        
+    
+    
+            marker_4373fce4d88be3d63863eff3e367fafa.bindTooltip(
+                `<div>
+                     Résidence Marjane إقامة مرجان (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4373fce4d88be3d63863eff3e367fafa.setIcon(icon_d17f3b0f7b22c9b1bb5c7112d7edb88c);
+            
+    
+            var marker_4560caf86212fc51765dc2fa8fbcc324 = L.marker(
+                [33.5662976, -7.6760715],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_1be4428a48ed8cd459bb3577fd655069 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61d88ade462a1912e918a6df391454f1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a5e0b15a6ae5fb5cc64c6a398fb9b24e = $(`<div id="html_a5e0b15a6ae5fb5cc64c6a398fb9b24e" style="width: 100.0%; height: 100.0%;">                         <b>Marjane</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Marjane                         </div>`)[0];
+                popup_61d88ade462a1912e918a6df391454f1.setContent(html_a5e0b15a6ae5fb5cc64c6a398fb9b24e);
+            
+        
+
+        marker_4560caf86212fc51765dc2fa8fbcc324.bindPopup(popup_61d88ade462a1912e918a6df391454f1)
+        ;
+
+        
+    
+    
+            marker_4560caf86212fc51765dc2fa8fbcc324.bindTooltip(
+                `<div>
+                     Marjane (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4560caf86212fc51765dc2fa8fbcc324.setIcon(icon_1be4428a48ed8cd459bb3577fd655069);
+            
+    
+            var marker_fe0417a05b54bc5a81699abcbe9c8513 = L.marker(
+                [33.5970845, -7.5815519],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_7b17e3641e7323161163482aefd6c22b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ea094e08919bc3dbc65801c4b90d76a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_40ac79167433baf157519e0b8b7920e3 = $(`<div id="html_40ac79167433baf157519e0b8b7920e3" style="width: 100.0%; height: 100.0%;">                         <b>L139 Marjane Aïn Sbaâ - Hôpital Sofi</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: L139 Marjane Aïn Sbaâ - Hôpital Sofi                         </div>`)[0];
+                popup_1ea094e08919bc3dbc65801c4b90d76a.setContent(html_40ac79167433baf157519e0b8b7920e3);
+            
+        
+
+        marker_fe0417a05b54bc5a81699abcbe9c8513.bindPopup(popup_1ea094e08919bc3dbc65801c4b90d76a)
+        ;
+
+        
+    
+    
+            marker_fe0417a05b54bc5a81699abcbe9c8513.bindTooltip(
+                `<div>
+                     L139 Marjane Aïn Sbaâ - Hôpital Sofi (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fe0417a05b54bc5a81699abcbe9c8513.setIcon(icon_7b17e3641e7323161163482aefd6c22b);
+            
+    
+            var marker_c9b0f38c10be8ddf7c33e1493f3b0637 = L.marker(
+                [33.5970534, -7.5816907],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_ca66a8332bb5a7b8eddb8d4a971d7a9e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d95d2e55283c239b473e5237a4ea99d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_12bcdca91ac0868b9cbb35672bca53ed = $(`<div id="html_12bcdca91ac0868b9cbb35672bca53ed" style="width: 100.0%; height: 100.0%;">                         <b>L139 Hôpital Sofi - Marjane Aïn Sbaâ</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: L139 Hôpital Sofi - Marjane Aïn Sbaâ                         </div>`)[0];
+                popup_1d95d2e55283c239b473e5237a4ea99d.setContent(html_12bcdca91ac0868b9cbb35672bca53ed);
+            
+        
+
+        marker_c9b0f38c10be8ddf7c33e1493f3b0637.bindPopup(popup_1d95d2e55283c239b473e5237a4ea99d)
+        ;
+
+        
+    
+    
+            marker_c9b0f38c10be8ddf7c33e1493f3b0637.bindTooltip(
+                `<div>
+                     L139 Hôpital Sofi - Marjane Aïn Sbaâ (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9b0f38c10be8ddf7c33e1493f3b0637.setIcon(icon_ca66a8332bb5a7b8eddb8d4a971d7a9e);
+            
+    
+            var marker_224b410f3d24f53090efcb5cd9538461 = L.marker(
+                [33.5623474, -7.5941062],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_36dc939453b1c8fcbdbbde7d0aad05ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a410b3f8fb6fd6f368ab6657d4babe2d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61606a283e44eb97b364697072776f1f = $(`<div id="html_61606a283e44eb97b364697072776f1f" style="width: 100.0%; height: 100.0%;">                         <b>McDonald's</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Boulevard Mohamed VI                         </div>`)[0];
+                popup_a410b3f8fb6fd6f368ab6657d4babe2d.setContent(html_61606a283e44eb97b364697072776f1f);
+            
+        
+
+        marker_224b410f3d24f53090efcb5cd9538461.bindPopup(popup_a410b3f8fb6fd6f368ab6657d4babe2d)
+        ;
+
+        
+    
+    
+            marker_224b410f3d24f53090efcb5cd9538461.bindTooltip(
+                `<div>
+                     McDonald's (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_224b410f3d24f53090efcb5cd9538461.setIcon(icon_36dc939453b1c8fcbdbbde7d0aad05ac);
+            
+    
+            var marker_ff4f1a3a2fddaccd742f05537cc89ca4 = L.marker(
+                [33.5759477, -7.6153091],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_3eb62a6c57e3edd3c156762a9a6ef2f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d014b4c4fb2550b5dd9da472cb8e863 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_56cb5595d066bda2796ae63cdb0edeb4 = $(`<div id="html_56cb5595d066bda2796ae63cdb0edeb4" style="width: 100.0%; height: 100.0%;">                         <b>McDonald's</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue 2 Mars                         </div>`)[0];
+                popup_8d014b4c4fb2550b5dd9da472cb8e863.setContent(html_56cb5595d066bda2796ae63cdb0edeb4);
+            
+        
+
+        marker_ff4f1a3a2fddaccd742f05537cc89ca4.bindPopup(popup_8d014b4c4fb2550b5dd9da472cb8e863)
+        ;
+
+        
+    
+    
+            marker_ff4f1a3a2fddaccd742f05537cc89ca4.bindTooltip(
+                `<div>
+                     McDonald's (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ff4f1a3a2fddaccd742f05537cc89ca4.setIcon(icon_3eb62a6c57e3edd3c156762a9a6ef2f6);
+            
+    
+            var marker_0bb612d378efa18414ec131c9c377009 = L.marker(
+                [33.5881192, -7.6175943],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_5ae4406cf607522ebd8353b11931a6fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_490df552ec3333d200d0180c61c8f66e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5949000d954297516b948e1fba32fa74 = $(`<div id="html_5949000d954297516b948e1fba32fa74" style="width: 100.0%; height: 100.0%;">                         <b>McDonald's</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue Mers Sultan                         </div>`)[0];
+                popup_490df552ec3333d200d0180c61c8f66e.setContent(html_5949000d954297516b948e1fba32fa74);
+            
+        
+
+        marker_0bb612d378efa18414ec131c9c377009.bindPopup(popup_490df552ec3333d200d0180c61c8f66e)
+        ;
+
+        
+    
+    
+            marker_0bb612d378efa18414ec131c9c377009.bindTooltip(
+                `<div>
+                     McDonald's (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0bb612d378efa18414ec131c9c377009.setIcon(icon_5ae4406cf607522ebd8353b11931a6fb);
+            
+    
+            var marker_f9b8d8433a84b04de4af4efa36349107 = L.marker(
+                [33.5858757, -7.5928149],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_4e73325cdeb3362151d6b421b4a7f5a5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20d877e73a1336aadb72629d89de437b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7410369ce27280da6ac5d97beec2801b = $(`<div id="html_7410369ce27280da6ac5d97beec2801b" style="width: 100.0%; height: 100.0%;">                         <b>McDonald's</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: McDonald's                         </div>`)[0];
+                popup_20d877e73a1336aadb72629d89de437b.setContent(html_7410369ce27280da6ac5d97beec2801b);
+            
+        
+
+        marker_f9b8d8433a84b04de4af4efa36349107.bindPopup(popup_20d877e73a1336aadb72629d89de437b)
+        ;
+
+        
+    
+    
+            marker_f9b8d8433a84b04de4af4efa36349107.bindTooltip(
+                `<div>
+                     McDonald's (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f9b8d8433a84b04de4af4efa36349107.setIcon(icon_4e73325cdeb3362151d6b421b4a7f5a5);
+            
+    
+            var marker_b1d261fb7e95862391eb89f5e0c4a6f7 = L.marker(
+                [33.5861117, -7.6368073],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_32e1c5435a6b168fd511bdae9d6b6e90 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2950af5a92dc66b89f4bcddbfb7b2ac2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_445f5e81a58d2a1472a6416b48498531 = $(`<div id="html_445f5e81a58d2a1472a6416b48498531" style="width: 100.0%; height: 100.0%;">                         <b>KFC</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Rue El Kadi Iass زنقة القاضي إياس                         </div>`)[0];
+                popup_2950af5a92dc66b89f4bcddbfb7b2ac2.setContent(html_445f5e81a58d2a1472a6416b48498531);
+            
+        
+
+        marker_b1d261fb7e95862391eb89f5e0c4a6f7.bindPopup(popup_2950af5a92dc66b89f4bcddbfb7b2ac2)
+        ;
+
+        
+    
+    
+            marker_b1d261fb7e95862391eb89f5e0c4a6f7.bindTooltip(
+                `<div>
+                     KFC (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b1d261fb7e95862391eb89f5e0c4a6f7.setIcon(icon_32e1c5435a6b168fd511bdae9d6b6e90);
+            
+    
+            var marker_7dfc2f5ddafe6c555f8278fd32638ce2 = L.marker(
+                [33.595602, -7.6174129],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_598b143f3fe9f5f2032cb12e17e5f280 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_55decad70f2125f693de2dc2330f9c82 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_59608d5c1df5d715d4eb10b624408990 = $(`<div id="html_59608d5c1df5d715d4eb10b624408990" style="width: 100.0%; height: 100.0%;">                         <b>KFC</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: KFC                         </div>`)[0];
+                popup_55decad70f2125f693de2dc2330f9c82.setContent(html_59608d5c1df5d715d4eb10b624408990);
+            
+        
+
+        marker_7dfc2f5ddafe6c555f8278fd32638ce2.bindPopup(popup_55decad70f2125f693de2dc2330f9c82)
+        ;
+
+        
+    
+    
+            marker_7dfc2f5ddafe6c555f8278fd32638ce2.bindTooltip(
+                `<div>
+                     KFC (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7dfc2f5ddafe6c555f8278fd32638ce2.setIcon(icon_598b143f3fe9f5f2032cb12e17e5f280);
+            
+    
+            var marker_5c527f40ed5e99c5ddd6e6a49c46dc07 = L.marker(
+                [33.5928524, -7.6318233],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_94a5d88dca1fe4c7a6a75226db4625e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c4d4a7e276329c7e9af02a175dfb7aa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_445193d742dac8e5dfdb8922aea41ef8 = $(`<div id="html_445193d742dac8e5dfdb8922aea41ef8" style="width: 100.0%; height: 100.0%;">                         <b>KFC</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: KFC                         </div>`)[0];
+                popup_4c4d4a7e276329c7e9af02a175dfb7aa.setContent(html_445193d742dac8e5dfdb8922aea41ef8);
+            
+        
+
+        marker_5c527f40ed5e99c5ddd6e6a49c46dc07.bindPopup(popup_4c4d4a7e276329c7e9af02a175dfb7aa)
+        ;
+
+        
+    
+    
+            marker_5c527f40ed5e99c5ddd6e6a49c46dc07.bindTooltip(
+                `<div>
+                     KFC (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c527f40ed5e99c5ddd6e6a49c46dc07.setIcon(icon_94a5d88dca1fe4c7a6a75226db4625e5);
+            
+    
+            var marker_a1fd41f0e0d3980708f627e6678edbe1 = L.marker(
+                [33.5753667, -7.6156108],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_b89cf6701f15368277d5c1406d9130d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_adaf24c6feaf215af2fc292d7dec7baa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0d8c1c44f6e789c1b87879b25d9d8a1e = $(`<div id="html_0d8c1c44f6e789c1b87879b25d9d8a1e" style="width: 100.0%; height: 100.0%;">                         <b>KFC</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue 2 Mars                         </div>`)[0];
+                popup_adaf24c6feaf215af2fc292d7dec7baa.setContent(html_0d8c1c44f6e789c1b87879b25d9d8a1e);
+            
+        
+
+        marker_a1fd41f0e0d3980708f627e6678edbe1.bindPopup(popup_adaf24c6feaf215af2fc292d7dec7baa)
+        ;
+
+        
+    
+    
+            marker_a1fd41f0e0d3980708f627e6678edbe1.bindTooltip(
+                `<div>
+                     KFC (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1fd41f0e0d3980708f627e6678edbe1.setIcon(icon_b89cf6701f15368277d5c1406d9130d2);
+            
+    
+            var marker_685dd73a6cd1ea2678121755eb1ed29d = L.marker(
+                [33.5764438, -7.7065764],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_df880881e755616326d55c2be1a89e80 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74c833702870e39c40acc53f7d7e2f81 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5c467e5f9394fbaa73e74a2f0991d51f = $(`<div id="html_5c467e5f9394fbaa73e74a2f0991d51f" style="width: 100.0%; height: 100.0%;">                         <b>KFC</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: KFC                         </div>`)[0];
+                popup_74c833702870e39c40acc53f7d7e2f81.setContent(html_5c467e5f9394fbaa73e74a2f0991d51f);
+            
+        
+
+        marker_685dd73a6cd1ea2678121755eb1ed29d.bindPopup(popup_74c833702870e39c40acc53f7d7e2f81)
+        ;
+
+        
+    
+    
+            marker_685dd73a6cd1ea2678121755eb1ed29d.bindTooltip(
+                `<div>
+                     KFC (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_685dd73a6cd1ea2678121755eb1ed29d.setIcon(icon_df880881e755616326d55c2be1a89e80);
+            
+    
+            var marker_62de0139ce136ae9c56344d8ea28dee0 = L.marker(
+                [33.5873876, -7.6850644],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_8600642f65871d527b5a45eff9056034 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f19e8f3667c15a12a3a0875cbcad8f16 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d79cad86ec5ee04a5432f3c7622c123 = $(`<div id="html_3d79cad86ec5ee04a5432f3c7622c123" style="width: 100.0%; height: 100.0%;">                         <b>KFC</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: KFC                         </div>`)[0];
+                popup_f19e8f3667c15a12a3a0875cbcad8f16.setContent(html_3d79cad86ec5ee04a5432f3c7622c123);
+            
+        
+
+        marker_62de0139ce136ae9c56344d8ea28dee0.bindPopup(popup_f19e8f3667c15a12a3a0875cbcad8f16)
+        ;
+
+        
+    
+    
+            marker_62de0139ce136ae9c56344d8ea28dee0.bindTooltip(
+                `<div>
+                     KFC (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_62de0139ce136ae9c56344d8ea28dee0.setIcon(icon_8600642f65871d527b5a45eff9056034);
+            
+    
+            var marker_00f779b74628c6f6d76cffefe801ac1d = L.marker(
+                [33.5731, -7.5898],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_1ed10a7374c86443b80a66f7a269ea4f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61fb5c9fb646ecb016e649935f894640 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b41803ca34685dc51fa8d41ee2571440 = $(`<div id="html_b41803ca34685dc51fa8d41ee2571440" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Centre Ville</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Avenue Centre Ville, Casablanca                         </div>`)[0];
+                popup_61fb5c9fb646ecb016e649935f894640.setContent(html_b41803ca34685dc51fa8d41ee2571440);
+            
+        
+
+        marker_00f779b74628c6f6d76cffefe801ac1d.bindPopup(popup_61fb5c9fb646ecb016e649935f894640)
+        ;
+
+        
+    
+    
+            marker_00f779b74628c6f6d76cffefe801ac1d.bindTooltip(
+                `<div>
+                     Carrefour Centre Ville (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_00f779b74628c6f6d76cffefe801ac1d.setIcon(icon_1ed10a7374c86443b80a66f7a269ea4f);
+            
+    
+            var marker_aa47dc6895430fe23f0f65378d9f0bda = L.marker(
+                [33.5981, -7.6644],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_7c5cc78c3f8645463aea0e4331a576e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb92bb2b531e2cc756542d087f3c831d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38b2e3a210b711456ebbf8bf020080a2 = $(`<div id="html_38b2e3a210b711456ebbf8bf020080a2" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Ain Diab</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Avenue Ain Diab, Casablanca                         </div>`)[0];
+                popup_fb92bb2b531e2cc756542d087f3c831d.setContent(html_38b2e3a210b711456ebbf8bf020080a2);
+            
+        
+
+        marker_aa47dc6895430fe23f0f65378d9f0bda.bindPopup(popup_fb92bb2b531e2cc756542d087f3c831d)
+        ;
+
+        
+    
+    
+            marker_aa47dc6895430fe23f0f65378d9f0bda.bindTooltip(
+                `<div>
+                     Carrefour Ain Diab (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aa47dc6895430fe23f0f65378d9f0bda.setIcon(icon_7c5cc78c3f8645463aea0e4331a576e0);
+            
+    
+            var marker_1a1ed42194b5cf4b80743553f59e7280 = L.marker(
+                [33.5908, -7.6462],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_d4f7161e359b5063c8c57f8925619d37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5923039980ddb9d64d258633aac06090 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1ab6f58a744553b8de2e0bd4e163a198 = $(`<div id="html_1ab6f58a744553b8de2e0bd4e163a198" style="width: 100.0%; height: 100.0%;">                         <b>Carrefour Maarif</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Avenue Maarif, Casablanca                         </div>`)[0];
+                popup_5923039980ddb9d64d258633aac06090.setContent(html_1ab6f58a744553b8de2e0bd4e163a198);
+            
+        
+
+        marker_1a1ed42194b5cf4b80743553f59e7280.bindPopup(popup_5923039980ddb9d64d258633aac06090)
+        ;
+
+        
+    
+    
+            marker_1a1ed42194b5cf4b80743553f59e7280.bindTooltip(
+                `<div>
+                     Carrefour Maarif (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a1ed42194b5cf4b80743553f59e7280.setIcon(icon_d4f7161e359b5063c8c57f8925619d37);
+            
+    
+            var marker_2c4859b4f54fdb8411cf3d9e45933d24 = L.marker(
+                [33.5625, -7.6331],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_b339cad207adee780f5ee3efc3072b22 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ef47d610b9c827aa890191cdf948d3a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b1a37c0b14fac421b8840c5b488793b6 = $(`<div id="html_b1a37c0b14fac421b8840c5b488793b6" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Derb Ghallef</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Avenue Derb Ghallef, Casablanca                         </div>`)[0];
+                popup_1ef47d610b9c827aa890191cdf948d3a.setContent(html_b1a37c0b14fac421b8840c5b488793b6);
+            
+        
+
+        marker_2c4859b4f54fdb8411cf3d9e45933d24.bindPopup(popup_1ef47d610b9c827aa890191cdf948d3a)
+        ;
+
+        
+    
+    
+            marker_2c4859b4f54fdb8411cf3d9e45933d24.bindTooltip(
+                `<div>
+                     Marjane Derb Ghallef (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2c4859b4f54fdb8411cf3d9e45933d24.setIcon(icon_b339cad207adee780f5ee3efc3072b22);
+            
+    
+            var marker_51935c3edcbfc3e16e7e7ac82e9e7cbd = L.marker(
+                [33.5456, -7.6789],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_8664e5768f4af5c7559f3c34a0db498f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc826daf44c75eaaee9565ac6717dc27 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7199a2665a2446f0a1af074380252aab = $(`<div id="html_7199a2665a2446f0a1af074380252aab" style="width: 100.0%; height: 100.0%;">                         <b>Marjane California</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Avenue California, Casablanca                         </div>`)[0];
+                popup_cc826daf44c75eaaee9565ac6717dc27.setContent(html_7199a2665a2446f0a1af074380252aab);
+            
+        
+
+        marker_51935c3edcbfc3e16e7e7ac82e9e7cbd.bindPopup(popup_cc826daf44c75eaaee9565ac6717dc27)
+        ;
+
+        
+    
+    
+            marker_51935c3edcbfc3e16e7e7ac82e9e7cbd.bindTooltip(
+                `<div>
+                     Marjane California (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_51935c3edcbfc3e16e7e7ac82e9e7cbd.setIcon(icon_8664e5768f4af5c7559f3c34a0db498f);
+            
+    
+            var marker_e0b96a1aa5ee09f4df653c4890b1e965 = L.marker(
+                [33.6012, -7.6123],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_a7405fd498bb504a1b6b06754d0f0454 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da0cfc21f803d6e9de6fb23ac48fbfd6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a33e6aedd563256868eb422287b02ba8 = $(`<div id="html_a33e6aedd563256868eb422287b02ba8" style="width: 100.0%; height: 100.0%;">                         <b>Marjane Racine</b><br>                         Catégorie: Supermarché<br>                         Statut: Formel<br>                         Adresse: Avenue Racine, Casablanca                         </div>`)[0];
+                popup_da0cfc21f803d6e9de6fb23ac48fbfd6.setContent(html_a33e6aedd563256868eb422287b02ba8);
+            
+        
+
+        marker_e0b96a1aa5ee09f4df653c4890b1e965.bindPopup(popup_da0cfc21f803d6e9de6fb23ac48fbfd6)
+        ;
+
+        
+    
+    
+            marker_e0b96a1aa5ee09f4df653c4890b1e965.bindTooltip(
+                `<div>
+                     Marjane Racine (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e0b96a1aa5ee09f4df653c4890b1e965.setIcon(icon_a7405fd498bb504a1b6b06754d0f0454);
+            
+    
+            var marker_7a345a3900d1d4fd2208e91a181bc3df = L.marker(
+                [33.5723, -7.6234],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_b583598bb031e816e47aca153d3571d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7b0ff728c79a3ba7046cac460993e68 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c82512dbd8193d80d2800acdfc2805d4 = $(`<div id="html_c82512dbd8193d80d2800acdfc2805d4" style="width: 100.0%; height: 100.0%;">                         <b>BIM Centre</b><br>                         Catégorie: Supérette / Mini-market<br>                         Statut: Formel<br>                         Adresse: Avenue Centre, Casablanca                         </div>`)[0];
+                popup_a7b0ff728c79a3ba7046cac460993e68.setContent(html_c82512dbd8193d80d2800acdfc2805d4);
+            
+        
+
+        marker_7a345a3900d1d4fd2208e91a181bc3df.bindPopup(popup_a7b0ff728c79a3ba7046cac460993e68)
+        ;
+
+        
+    
+    
+            marker_7a345a3900d1d4fd2208e91a181bc3df.bindTooltip(
+                `<div>
+                     BIM Centre (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a345a3900d1d4fd2208e91a181bc3df.setIcon(icon_b583598bb031e816e47aca153d3571d3);
+            
+    
+            var marker_69dca247cab87bea661ffbfb3ee8c99a = L.marker(
+                [33.5834, -7.6456],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_cfbd5e76f429ac9c9bccce690a94cf19 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6853bce8e6eaa23c13a341733fc8145d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_60844f7c2908bcf78d5455b8c5d779a1 = $(`<div id="html_60844f7c2908bcf78d5455b8c5d779a1" style="width: 100.0%; height: 100.0%;">                         <b>BIM Hay Hassani</b><br>                         Catégorie: Supérette / Mini-market<br>                         Statut: Formel<br>                         Adresse: Avenue Hay Hassani, Casablanca                         </div>`)[0];
+                popup_6853bce8e6eaa23c13a341733fc8145d.setContent(html_60844f7c2908bcf78d5455b8c5d779a1);
+            
+        
+
+        marker_69dca247cab87bea661ffbfb3ee8c99a.bindPopup(popup_6853bce8e6eaa23c13a341733fc8145d)
+        ;
+
+        
+    
+    
+            marker_69dca247cab87bea661ffbfb3ee8c99a.bindTooltip(
+                `<div>
+                     BIM Hay Hassani (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_69dca247cab87bea661ffbfb3ee8c99a.setIcon(icon_cfbd5e76f429ac9c9bccce690a94cf19);
+            
+    
+            var marker_d3b5af012242d055d7c6d6d8861f467f = L.marker(
+                [33.5612, -7.6789],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_450532fcfdc6a2a18a7490eb2d585e16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_619d3f3a94ba811441782c12e6374929 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b504c9d7fd20ffa281476e8f2f9b3a2 = $(`<div id="html_9b504c9d7fd20ffa281476e8f2f9b3a2" style="width: 100.0%; height: 100.0%;">                         <b>BIM Sidi Bernoussi</b><br>                         Catégorie: Supérette / Mini-market<br>                         Statut: Formel<br>                         Adresse: Avenue Sidi Bernoussi, Casablanca                         </div>`)[0];
+                popup_619d3f3a94ba811441782c12e6374929.setContent(html_9b504c9d7fd20ffa281476e8f2f9b3a2);
+            
+        
+
+        marker_d3b5af012242d055d7c6d6d8861f467f.bindPopup(popup_619d3f3a94ba811441782c12e6374929)
+        ;
+
+        
+    
+    
+            marker_d3b5af012242d055d7c6d6d8861f467f.bindTooltip(
+                `<div>
+                     BIM Sidi Bernoussi (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d3b5af012242d055d7c6d6d8861f467f.setIcon(icon_450532fcfdc6a2a18a7490eb2d585e16);
+            
+    
+            var marker_5328b806a112830a1edef011dfad6372 = L.marker(
+                [33.5831, -7.608],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_2c25b88f906c0a76b406949dade4e559 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43490ff7aaa7c8ed8d2d788dc536931e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ec83865173784d27b83ca13650b7511e = $(`<div id="html_ec83865173784d27b83ca13650b7511e" style="width: 100.0%; height: 100.0%;">                         <b>McDonald's Mers Sultan</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue Mers Sultan, Casablanca                         </div>`)[0];
+                popup_43490ff7aaa7c8ed8d2d788dc536931e.setContent(html_ec83865173784d27b83ca13650b7511e);
+            
+        
+
+        marker_5328b806a112830a1edef011dfad6372.bindPopup(popup_43490ff7aaa7c8ed8d2d788dc536931e)
+        ;
+
+        
+    
+    
+            marker_5328b806a112830a1edef011dfad6372.bindTooltip(
+                `<div>
+                     McDonald's Mers Sultan (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5328b806a112830a1edef011dfad6372.setIcon(icon_2c25b88f906c0a76b406949dade4e559);
+            
+    
+            var marker_9dcb87f58399b3cbcadc72ec9f2e0f7f = L.marker(
+                [33.5971, -7.6294],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_a177f22ae092ec872480b3c31de6a544 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_612a22a35a18042fadc70a74dd78fd9b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bfe58dd7b49f4b30f39face630443a66 = $(`<div id="html_bfe58dd7b49f4b30f39face630443a66" style="width: 100.0%; height: 100.0%;">                         <b>McDonald's Sour Jdid</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue Sour Jdid, Casablanca                         </div>`)[0];
+                popup_612a22a35a18042fadc70a74dd78fd9b.setContent(html_bfe58dd7b49f4b30f39face630443a66);
+            
+        
+
+        marker_9dcb87f58399b3cbcadc72ec9f2e0f7f.bindPopup(popup_612a22a35a18042fadc70a74dd78fd9b)
+        ;
+
+        
+    
+    
+            marker_9dcb87f58399b3cbcadc72ec9f2e0f7f.bindTooltip(
+                `<div>
+                     McDonald's Sour Jdid (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9dcb87f58399b3cbcadc72ec9f2e0f7f.setIcon(icon_a177f22ae092ec872480b3c31de6a544);
+            
+    
+            var marker_9470ff44e3cd384154140217a18fc257 = L.marker(
+                [33.5802, -7.6409],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_fdfc8a1d54a057cbb594026008807ab2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67d8634077e99b8dbbfa6135b4d7cb33 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b2d53f4f5538c26783dc0b2d66ef764d = $(`<div id="html_b2d53f4f5538c26783dc0b2d66ef764d" style="width: 100.0%; height: 100.0%;">                         <b>McDonald's Maarif</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue Maarif, Casablanca                         </div>`)[0];
+                popup_67d8634077e99b8dbbfa6135b4d7cb33.setContent(html_b2d53f4f5538c26783dc0b2d66ef764d);
+            
+        
+
+        marker_9470ff44e3cd384154140217a18fc257.bindPopup(popup_67d8634077e99b8dbbfa6135b4d7cb33)
+        ;
+
+        
+    
+    
+            marker_9470ff44e3cd384154140217a18fc257.bindTooltip(
+                `<div>
+                     McDonald's Maarif (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9470ff44e3cd384154140217a18fc257.setIcon(icon_fdfc8a1d54a057cbb594026008807ab2);
+            
+    
+            var marker_364d86c1d69e432dd2a44da67239cc5b = L.marker(
+                [33.5738, -7.6446],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_4a6a9e1d872b96485cbf9ba80664485d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_221766037cb8fffbd4f397b023e8552a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07558caa1b65087beb2c401cfaffec2d = $(`<div id="html_07558caa1b65087beb2c401cfaffec2d" style="width: 100.0%; height: 100.0%;">                         <b>KFC Berger</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue Berger, Casablanca                         </div>`)[0];
+                popup_221766037cb8fffbd4f397b023e8552a.setContent(html_07558caa1b65087beb2c401cfaffec2d);
+            
+        
+
+        marker_364d86c1d69e432dd2a44da67239cc5b.bindPopup(popup_221766037cb8fffbd4f397b023e8552a)
+        ;
+
+        
+    
+    
+            marker_364d86c1d69e432dd2a44da67239cc5b.bindTooltip(
+                `<div>
+                     KFC Berger (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_364d86c1d69e432dd2a44da67239cc5b.setIcon(icon_4a6a9e1d872b96485cbf9ba80664485d);
+            
+    
+            var marker_877b682cb93ac1cbaf4353e8247d210e = L.marker(
+                [33.5771, -7.6741],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_433515755b71d2222899233d979dc240 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a700a15b714d31c45e6d3f6e4d4408b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1f20ebc81030f965f1d95de4e3bbb877 = $(`<div id="html_1f20ebc81030f965f1d95de4e3bbb877" style="width: 100.0%; height: 100.0%;">                         <b>KFC Ain Diab</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue Ain Diab, Casablanca                         </div>`)[0];
+                popup_2a700a15b714d31c45e6d3f6e4d4408b.setContent(html_1f20ebc81030f965f1d95de4e3bbb877);
+            
+        
+
+        marker_877b682cb93ac1cbaf4353e8247d210e.bindPopup(popup_2a700a15b714d31c45e6d3f6e4d4408b)
+        ;
+
+        
+    
+    
+            marker_877b682cb93ac1cbaf4353e8247d210e.bindTooltip(
+                `<div>
+                     KFC Ain Diab (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_877b682cb93ac1cbaf4353e8247d210e.setIcon(icon_433515755b71d2222899233d979dc240);
+            
+    
+            var marker_37f31aa72a99c08f8cf199018a51760b = L.marker(
+                [33.573, -7.6198],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_a02d2cc293e160e6b893246f0978056a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_576e1dffd5a087190e59fdd976af5cf3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0945d0fd9c584b415f06103178ff894e = $(`<div id="html_0945d0fd9c584b415f06103178ff894e" style="width: 100.0%; height: 100.0%;">                         <b>KFC Les Hôpitaux</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Avenue Les Hôpitaux, Casablanca                         </div>`)[0];
+                popup_576e1dffd5a087190e59fdd976af5cf3.setContent(html_0945d0fd9c584b415f06103178ff894e);
+            
+        
+
+        marker_37f31aa72a99c08f8cf199018a51760b.bindPopup(popup_576e1dffd5a087190e59fdd976af5cf3)
+        ;
+
+        
+    
+    
+            marker_37f31aa72a99c08f8cf199018a51760b.bindTooltip(
+                `<div>
+                     KFC Les Hôpitaux (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_37f31aa72a99c08f8cf199018a51760b.setIcon(icon_a02d2cc293e160e6b893246f0978056a);
+            
+    
+            var marker_a9756d9b5e157c6f068e915051226b79 = L.marker(
+                [33.55309999999999, -7.6098],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_648067433b8c929f79560dbd76ed0a46 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_882a69f0b401344a1b79b7db2dc15aa5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_25fab6b9112e72486a12bc8d78796607 = $(`<div id="html_25fab6b9112e72486a12bc8d78796607" style="width: 100.0%; height: 100.0%;">                         <b>Paul Casablanca Centre</b><br>                         Catégorie: Boulangerie<br>                         Statut: Formel<br>                         Adresse: Centre Commercial, Casablanca                         </div>`)[0];
+                popup_882a69f0b401344a1b79b7db2dc15aa5.setContent(html_25fab6b9112e72486a12bc8d78796607);
+            
+        
+
+        marker_a9756d9b5e157c6f068e915051226b79.bindPopup(popup_882a69f0b401344a1b79b7db2dc15aa5)
+        ;
+
+        
+    
+    
+            marker_a9756d9b5e157c6f068e915051226b79.bindTooltip(
+                `<div>
+                     Paul Casablanca Centre (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a9756d9b5e157c6f068e915051226b79.setIcon(icon_648067433b8c929f79560dbd76ed0a46);
+            
+    
+            var marker_3f5899b36c63535839223a0a4cd289f2 = L.marker(
+                [33.56309999999999, -7.6018],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_19ddf8dae4936610c5fecdafef0a0d5c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30320237c0371f67a2b7089f559a6644 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b8de3492feb2b49f1688adcfd5dcfda0 = $(`<div id="html_b8de3492feb2b49f1688adcfd5dcfda0" style="width: 100.0%; height: 100.0%;">                         <b>Brioche Dorée Casablanca Centre</b><br>                         Catégorie: Boulangerie<br>                         Statut: Formel<br>                         Adresse: Centre Commercial, Casablanca                         </div>`)[0];
+                popup_30320237c0371f67a2b7089f559a6644.setContent(html_b8de3492feb2b49f1688adcfd5dcfda0);
+            
+        
+
+        marker_3f5899b36c63535839223a0a4cd289f2.bindPopup(popup_30320237c0371f67a2b7089f559a6644)
+        ;
+
+        
+    
+    
+            marker_3f5899b36c63535839223a0a4cd289f2.bindTooltip(
+                `<div>
+                     Brioche Dorée Casablanca Centre (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3f5899b36c63535839223a0a4cd289f2.setIcon(icon_19ddf8dae4936610c5fecdafef0a0d5c);
+            
+    
+            var marker_4b6acde05e25f0a26e239a3ba0c47332 = L.marker(
+                [33.5731, -7.5938],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_58eb6e12a89f44da8d91e5a17ac8be81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00c2733dd112c3ce68ed136854ef760a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_702440a4a62e031e06dd9c81ef57d73b = $(`<div id="html_702440a4a62e031e06dd9c81ef57d73b" style="width: 100.0%; height: 100.0%;">                         <b>Domino's Pizza Casablanca Centre</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Centre Commercial, Casablanca                         </div>`)[0];
+                popup_00c2733dd112c3ce68ed136854ef760a.setContent(html_702440a4a62e031e06dd9c81ef57d73b);
+            
+        
+
+        marker_4b6acde05e25f0a26e239a3ba0c47332.bindPopup(popup_00c2733dd112c3ce68ed136854ef760a)
+        ;
+
+        
+    
+    
+            marker_4b6acde05e25f0a26e239a3ba0c47332.bindTooltip(
+                `<div>
+                     Domino's Pizza Casablanca Centre (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4b6acde05e25f0a26e239a3ba0c47332.setIcon(icon_58eb6e12a89f44da8d91e5a17ac8be81);
+            
+    
+            var marker_34ca9495908d18e51e2de3c1ce295a8c = L.marker(
+                [33.583099999999995, -7.5858],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_711ec6b10f32190e3952d69b4117d533 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_929d234e2069b01dcfc7436de92590c2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16def2a7f088f1e0408f0d6a4179ce95 = $(`<div id="html_16def2a7f088f1e0408f0d6a4179ce95" style="width: 100.0%; height: 100.0%;">                         <b>Starbucks Casablanca Centre</b><br>                         Catégorie: Café<br>                         Statut: Formel<br>                         Adresse: Centre Commercial, Casablanca                         </div>`)[0];
+                popup_929d234e2069b01dcfc7436de92590c2.setContent(html_16def2a7f088f1e0408f0d6a4179ce95);
+            
+        
+
+        marker_34ca9495908d18e51e2de3c1ce295a8c.bindPopup(popup_929d234e2069b01dcfc7436de92590c2)
+        ;
+
+        
+    
+    
+            marker_34ca9495908d18e51e2de3c1ce295a8c.bindTooltip(
+                `<div>
+                     Starbucks Casablanca Centre (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_34ca9495908d18e51e2de3c1ce295a8c.setIcon(icon_711ec6b10f32190e3952d69b4117d533);
+            
+    
+            var marker_0bf9b2cf4275b13641f790212889ae3a = L.marker(
+                [33.59309999999999, -7.5778],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_9c3c90f72b979eb46230b0cf8c50d00f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71926ee32efffbf57eb8e8c77ea17032 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6006e4c7c3f0dc42583a93a9efba3038 = $(`<div id="html_6006e4c7c3f0dc42583a93a9efba3038" style="width: 100.0%; height: 100.0%;">                         <b>Subway Casablanca Centre</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Centre Commercial, Casablanca                         </div>`)[0];
+                popup_71926ee32efffbf57eb8e8c77ea17032.setContent(html_6006e4c7c3f0dc42583a93a9efba3038);
+            
+        
+
+        marker_0bf9b2cf4275b13641f790212889ae3a.bindPopup(popup_71926ee32efffbf57eb8e8c77ea17032)
+        ;
+
+        
+    
+    
+            marker_0bf9b2cf4275b13641f790212889ae3a.bindTooltip(
+                `<div>
+                     Subway Casablanca Centre (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0bf9b2cf4275b13641f790212889ae3a.setIcon(icon_9c3c90f72b979eb46230b0cf8c50d00f);
+            
+    
+            var marker_a41b3afce401faf39e8e7c55e845df6e = L.marker(
+                [33.60309999999999, -7.5698],
+                {
+}
+            ).addTo(marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db);
+        
+    
+            var icon_afc0ab7263f48e6d7dd6c3ac95bd48d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f326cc487ca9f37b1aac58a2697a6408 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3e64ca5c22b6ad2676d9fd7af56e3fa4 = $(`<div id="html_3e64ca5c22b6ad2676d9fd7af56e3fa4" style="width: 100.0%; height: 100.0%;">                         <b>Pizza Hut Casablanca Centre</b><br>                         Catégorie: Restaurant<br>                         Statut: Formel<br>                         Adresse: Centre Commercial, Casablanca                         </div>`)[0];
+                popup_f326cc487ca9f37b1aac58a2697a6408.setContent(html_3e64ca5c22b6ad2676d9fd7af56e3fa4);
+            
+        
+
+        marker_a41b3afce401faf39e8e7c55e845df6e.bindPopup(popup_f326cc487ca9f37b1aac58a2697a6408)
+        ;
+
+        
+    
+    
+            marker_a41b3afce401faf39e8e7c55e845df6e.bindTooltip(
+                `<div>
+                     Pizza Hut Casablanca Centre (Formel)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a41b3afce401faf39e8e7c55e845df6e.setIcon(icon_afc0ab7263f48e6d7dd6c3ac95bd48d2);
+            
+    
+            marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db.addTo(map_af619e80845ec81d49fdcb61159625ff);
+        
+    
+            var layer_control_fd654eafd1694b5ce23cd79c0827ce44_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0565e93b304c70ac81fd4156737c7b0e,
+                },
+                overlays :  {
+                    "Formel (105 points)" : marker_cluster_f9cfe6ce250ca844d76a13e1ae8031db,
+                },
+            };
+            let layer_control_fd654eafd1694b5ce23cd79c0827ce44 = L.control.layers(
+                layer_control_fd654eafd1694b5ce23cd79c0827ce44_layers.base_layers,
+                layer_control_fd654eafd1694b5ce23cd79c0827ce44_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_af619e80845ec81d49fdcb61159625ff);
+
+        
+</script>
+</html>

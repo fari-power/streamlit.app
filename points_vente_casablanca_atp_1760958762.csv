@@ -1,0 +1,22 @@
+﻿Zone,Nom,Catégorie,Statut,Adresse,Latitude,Longitude,Image
+Arrondissement de Mers Sultan,Carrefour Centre Ville,Supermarché,Formel,"Avenue Centre Ville, Casablanca",33.5731,-7.5898,icons/supermarket.png
+Anfa Supérieur,Carrefour Ain Diab,Supermarché,Formel,"Avenue Ain Diab, Casablanca",33.5981,-7.6644,icons/supermarket.png
+راسين,Carrefour Maarif,Supermarché,Formel,"Avenue Maarif, Casablanca",33.5908,-7.6462,icons/supermarket.png
+L'Oasis,Marjane Derb Ghallef,Supermarché,Formel,"Avenue Derb Ghallef, Casablanca",33.5625,-7.6331,icons/supermarket.png
+El Oulfa,Marjane California,Supermarché,Formel,"Avenue California, Casablanca",33.5456,-7.6789,icons/supermarket.png
+Arrondissement de Sidi Belyout,Marjane Racine,Supermarché,Formel,"Avenue Racine, Casablanca",33.6012,-7.6123,icons/supermarket.png
+Les Hôpitaux,BIM Centre,Supérette / Mini-market,Formel,"Avenue Centre, Casablanca",33.5723,-7.6234,icons/convenience.png
+Les Princesses,BIM Hay Hassani,Supérette / Mini-market,Formel,"Avenue Hay Hassani, Casablanca",33.5834,-7.6456,icons/convenience.png
+El Oulfa,BIM Sidi Bernoussi,Supérette / Mini-market,Formel,"Avenue Sidi Bernoussi, Casablanca",33.5612,-7.6789,icons/convenience.png
+Arrondissement de Mers Sultan,McDonald's Mers Sultan,Restaurant,Formel,"Avenue Mers Sultan, Casablanca",33.5831,-7.608,icons/restaurant.png
+Sour Jdid,McDonald's Sour Jdid,Restaurant,Formel,"Avenue Sour Jdid, Casablanca",33.5971,-7.6294,icons/restaurant.png
+Maârif Extension,McDonald's Maarif,Restaurant,Formel,"Avenue Maarif, Casablanca",33.5802,-7.6409,icons/restaurant.png
+Berger,KFC Berger,Restaurant,Formel,"Avenue Berger, Casablanca",33.5738,-7.6446,icons/restaurant.png
+Ain Diab,KFC Ain Diab,Restaurant,Formel,"Avenue Ain Diab, Casablanca",33.5771,-7.6741,icons/restaurant.png
+Les Hôpitaux,KFC Les Hôpitaux,Restaurant,Formel,"Avenue Les Hôpitaux, Casablanca",33.573,-7.6198,icons/restaurant.png
+Arrondissement d'Aïn-Chock,Paul Casablanca Centre,Boulangerie,Formel,"Centre Commercial, Casablanca",33.55309999999999,-7.6098,icons/bakery.png
+Arrondissement d'Al Fida,Brioche Dorée Casablanca Centre,Boulangerie,Formel,"Centre Commercial, Casablanca",33.56309999999999,-7.6018,icons/bakery.png
+Mers Sultan,Domino's Pizza Casablanca Centre,Restaurant,Formel,"Centre Commercial, Casablanca",33.5731,-7.5938,icons/restaurant.png
+Assoukhour Assawda,Starbucks Casablanca Centre,Café,Formel,"Centre Commercial, Casablanca",33.583099999999995,-7.5858,icons/cafe.png
+Arrondissement de Hay Mohammadi,Subway Casablanca Centre,Restaurant,Formel,"Centre Commercial, Casablanca",33.59309999999999,-7.5778,icons/restaurant.png
+Arrondissement d'Aïn Sebaâ,Pizza Hut Casablanca Centre,Restaurant,Formel,"Centre Commercial, Casablanca",33.60309999999999,-7.5698,icons/restaurant.png
