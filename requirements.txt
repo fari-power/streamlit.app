@@ -1,5 +1,5 @@
 pandas
 geopy
 folium
-scrapy
+streamlit-folium
 requests
