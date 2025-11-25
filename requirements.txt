@@ -2,4 +2,5 @@ pandas
 geopy
 folium
 streamlit-folium
+plotly
 requests
